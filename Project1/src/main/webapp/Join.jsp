@@ -40,8 +40,6 @@
             <td colspan="2"><input type="submit" value="회원가입완료"></td>
             </tr>
 		</table>
-		<br>
-		
 	</form>
 </body>
 </html>
