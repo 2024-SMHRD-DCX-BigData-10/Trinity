@@ -4,4 +4,24 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>frontcon</servlet-name>
+  	<display-name>frontcon</display-name>
+  	<description></description>
+  	<servlet-class>controller.frontcon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>frontController</servlet-name>
+  	<display-name>frontController</display-name>
+  	<description></description>
+  	<servlet-class>controller.frontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>frontcon</servlet-name>
+  	<url-pattern>/frontcon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>frontController</servlet-name>
+  	<url-pattern>/frontController</url-pattern>
+  </servlet-mapping>
 </web-app>
