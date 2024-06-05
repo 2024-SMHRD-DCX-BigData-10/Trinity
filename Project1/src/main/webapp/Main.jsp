@@ -16,8 +16,14 @@
 		button#sign{
 		margin-left:1000px;
 		margin-bottom: 20px;
+		background-color: #9acd32;
 		}button#login{
 		margin-left:10px;
+		background-color: #9acd32;
+		}
+		button#mypage{
+			margin-left: 10px;
+			background-color: #9acd32;
 		}
 		h1{
 			font-size: 30px;
