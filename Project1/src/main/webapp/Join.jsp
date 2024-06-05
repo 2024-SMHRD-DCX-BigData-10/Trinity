@@ -29,7 +29,7 @@ li#ok{
 				<li>비밀번호 확인 <input type="password" name="pw1" placeholder="비밀번호 다시 입력하세요."></li><br>
 				<li>닉네임 <input type="text" name="name" placeholder="닉네임을 입력하세요."><br><button type="button" id="btn"> 닉네임 중복 확인</button></li><br>
 				<li>이메일 입력 <input type="text" name="email"></li><br>
-				<li>성별 <select>
+				<li>성별 <select name="gender">
 							<option value="m"> 남자 </option>
 							<option value="f"> 여자 </option>	
 						</select> </li><br>
