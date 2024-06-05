@@ -36,7 +36,7 @@ public class frontController extends HttpServlet {
 	public void init() throws ServletException {
 		list = new HashMap<String, Command>();
 		list.put("/JoinCon.do", new JoinCon());
-		list.put("/LoinCon.do", new LoginCon());
+		list.put("/LoginCon.do", new LoginCon());
 		/*
 		 * list.put("/loginCon.do", new loginCon()); list.put("/BoardService.do", new
 		 * BoardService()); list.put("/DeleteCon.do", new DeleteCon());

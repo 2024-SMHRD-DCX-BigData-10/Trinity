@@ -20,11 +20,11 @@ public class LoginCon implements Command {
 		System.out.println("[LoginCon]");
 	      
 		   // 데이터 꺼내오기
-		      String email = request.getParameter("email");
+		      String id = request.getParameter("id");
 		      String pw = request.getParameter("pw");
 		      
 		      // DTO로 묶기
-		      MemberDTO dto = new MemberDTO(email, pw);
+		      MemberDTO dto = new MemberDTO(id, pw);
 		      
 		      // 로그인 기능이 있는 login메소드 호출
 		      MemberDTO user_info = new MemberDAO().login(dto);
