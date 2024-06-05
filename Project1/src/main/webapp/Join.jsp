@@ -21,7 +21,7 @@ li#ok{
 </style>
 <body>
 	
-	<form action="" method="post">
+	<form action="JoinCon.do" method="post">
 		<h2 style="margin-left: 660px"> 농초계회원가입 </h2>
 			<ul>
 				<li>아이디 입력 <input type="text" name="id" placeholder="아이디를 입력하세요."><br><button type="button" id="btn"> 아이디 중복 확인</button></li><br>
