@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="mapper.MemberMapper">
+  	<insert id="join" parameterType="MemberDTO">
+  		INSERT INTO tbl_member (mem_id, mem_pw, mem_name, mem_email, mem_gender, mem_birthdate, mem_type, mem_join_dt) VALUES (#{id}, #{pw}, #{name},#{email}, #{gender}, #{birthdate}, '1', sysdate);
+  	</insert>
+  	<select id="idCheck" parameterType="String" resultType="String">
+  	select email from web_member where email = #{email}
+  	</select>
+  	<select id="login" parameterType="MemberDTO" resultType="MemberDTO">
+  	select * from web_member where email = #{email} and pw=#{pw}
+  	</select>
+  	<update id="update" parameterType="MemberDTO" >
+  	update web_member set pw=#{pw}, tel=#{tel}, address = #{address} where email=#{email}
+  	</update>
+  	<select id="selectMember" resultType="MemberDTO">
+  	select * from web_member
+  	</select>
+  	<delete id="memdel" parameterType="String">
+  	delete from web_member where email=#{email}
+  	</delete>
+  </mapper>
