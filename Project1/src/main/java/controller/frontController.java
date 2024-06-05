@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import controller.Command;
+
 import Conclass.JoinCon;
 
 
@@ -24,8 +26,10 @@ public class frontController extends HttpServlet {
 		System.out.println(ser);
 		
 		request.setCharacterEncoding("UTF-8");
-	
-	
+		Command con = list.get(ser);
+		String moveURL = con.excute(request, response);
+		
+		response.sendRedirect(moveURL);
 	
 	}
 	public void init() throws ServletException {
