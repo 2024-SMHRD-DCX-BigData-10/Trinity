@@ -15,4 +15,11 @@ public class MemberDAO {
 		session.close();
 		return row;
 	}
+
+	public MemberDTO login(MemberDTO dto) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		MemberDTO user_info = session.selectOne("login", dto);
+		session.close();
+		return user_info;
+	}
 }
