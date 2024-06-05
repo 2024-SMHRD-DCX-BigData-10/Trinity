@@ -44,17 +44,17 @@
 				<div id="header">
 						
 					<!-- Logo -->
-						<h1><a href="exmain.jsp" id="logo"> <Strong>농부 초기자본계산 사이트</Strong></a></h1>
+						<h1><a href="Main.jsp" id="logo"> <Strong>농부 초기자본계산 사이트</Strong></a></h1>
 						<button id="sign"><a href="Join.jsp" id="join">회원가입</a></button>
-						<button id="login"><a href="loginForm.html" id="login">로그인</a></button>
-						<button id="mypage"><a href="right-sidebar.html" id="mypage">마이페이지</a></button>
+						<button id="login"><a href="Login.html" id="login">로그인</a></button>
+						<button id="mypage"><a href="Mypage.html" id="mypage">마이페이지</a></button>
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="exmain.jsp">Home</a></li>
-								<li><a href="left-sidebar.html">계산기</a></li>
-								<li><a href="two-sidebar.html">게시판</a></li>
-								<li><a href="no-sidebar.html">공지사항</a></li>
+								<li class="current"><a href="Main.jsp">Home</a></li>
+								<li><a href="Calculator.html">계산기</a></li>
+								<li><a href="Pan.html">게시판</a></li>
+								<li><a href="Notice.html">공지사항</a></li>
 							</ul>
 						</nav>
 
