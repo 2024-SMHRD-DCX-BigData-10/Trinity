@@ -28,6 +28,10 @@
 			margin-left: 10px;
 			background-color: #9acd32;
 		}
+		button#logout{
+			margin-left: 10px;
+			background-color: #9acd32;
+		}
 		h1{
 			font-size: 30px;
 			color: black;
@@ -42,6 +46,9 @@
 		color: black;
 		}
 		a#mypage{
+		color: black;
+		}
+		a#logout{
 		color: black;
 		}
 		</style>
@@ -59,7 +66,7 @@
 						<h1><a href="Main.jsp" id="logo"> <Strong>농부 초기자본계산 사이트</Strong></a></h1>
 						<% if(user_info !=null){%>
 						<button id="mypage"><a href="Mypage.html" id="mypage">마이페이지</a></button>
-						<button id="mypage"><a href="LogoutCon.do" id="mypage">로그아웃</a></button>
+						<button id="logout"><a href="LogoutCon.do" id="logout">로그아웃</a></button>
 										<%} else{%>
 						<button id="sign"><a href="Join.jsp"  id="join">회원가입</a></button>
 						<button id="login"><a href="Login.html"  id="login">로그인</a></button>
