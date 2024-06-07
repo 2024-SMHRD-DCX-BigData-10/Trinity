@@ -1,10 +1,5 @@
-<%@page import="model.BoardVO"%>
-<%@page import="java.util.List"%>
-<%@page import="model.BoardDAO"%>
-<%@page import="java.util.ArrayList"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page isELIgnored="false" language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <!--
 	Arcana by HTML5 UP
@@ -91,31 +86,33 @@
 
 								<span class="image featured"><img src="images/banner.jpg"
 									alt="" /></span>
-									<% List<BoardVO> boards= new BoardDAO().allBoard();
-									pageContext.setAttribute("boards",boards);
-									%>
+
 								<div id="board">
-									<table>
-										<tr>
-											<td>게시물 번호</td>
-											<td>제목</td>
-											<td>작성자</td>
-											<td>시간</td>
-										</tr>
-										<!--varStatus: 상태변수 -->
-										<c:forEach var="b" items="${boards}" varStatus="s">
+									<form action="BoardService.do" method="post"
+										enctype="multipart/form-data">
+										<table>
 											<tr>
-												<td>${s.count}</td>
-												<td><a href="BoardDetail.jsp?num=${b.num}">${b.title}</a></td>
-												<td>${b.id}</td>
-												<td>${b.b_date}</td>
+												<td>제목</td>
+												<td><input type="text" name="title"></td>
 											</tr>
-										</c:forEach>
-
-									</table>
-
-									<a href="Main.jsp"><button id="writer">홈으로가기</button></a> 
-									<a href="BoardWrite.jsp"><button id="writer">작성하러가기</button></a>
+											<tr>
+												<td>작성자</td>
+												<td><input type="text" name="writer"></td>
+											</tr>
+											<tr>
+												<td colspan="2">내용</td>
+											</tr>
+											<tr>
+												<td colspan="2"><input type="file" name="filename"
+													style="float: right;"> <textarea rows="10"
+														name="content" style="resize: none;"></textarea></td>
+											</tr>
+											<tr>
+												<td colspan="2"><input type="reset" value="초기화">
+													<input type="submit" value="작성하기"></td>
+											</tr>
+										</table>
+									</form>
 								</div>
 							</article>
 

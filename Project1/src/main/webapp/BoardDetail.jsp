@@ -1,10 +1,8 @@
-<%@page import="model.BoardVO"%>
-<%@page import="java.util.List"%>
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="model.BoardDAO"%>
-<%@page import="java.util.ArrayList"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page isELIgnored="false" language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page import="model.BoardVO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <!--
 	Arcana by HTML5 UP
@@ -91,31 +89,39 @@
 
 								<span class="image featured"><img src="images/banner.jpg"
 									alt="" /></span>
-									<% List<BoardVO> boards= new BoardDAO().allBoard();
-									pageContext.setAttribute("boards",boards);
-									%>
+
+								<%
+								int num = Integer.parseInt(request.getParameter("num"));
+								BoardVO board = new BoardDAO().detailBoard(num);
+								System.out.print(board.toString());
+								%>
 								<div id="board">
 									<table>
 										<tr>
-											<td>게시물 번호</td>
 											<td>제목</td>
-											<td>작성자</td>
-											<td>시간</td>
+											<td><%=board.getTitle()%></td>
 										</tr>
-										<!--varStatus: 상태변수 -->
-										<c:forEach var="b" items="${boards}" varStatus="s">
-											<tr>
-												<td>${s.count}</td>
-												<td><a href="BoardDetail.jsp?num=${b.num}">${b.title}</a></td>
-												<td>${b.id}</td>
-												<td>${b.b_date}</td>
-											</tr>
-										</c:forEach>
-
+										<tr>
+											<td>작성자</td>
+											<td><%=board.getId()%></td>
+										</tr>
+										<tr>
+											<td>다운로드</td>
+											<td><a href="./file/<%=board.getFilename()%>" download><%=board.getFilename()%></a></td>
+										</tr>
+										<tr>
+											<td colspan="2">내용</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<h3><%=board.getContent()%></h3> <img alt=""
+												src="./file/<%=board.getFilename()%>">
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2"><a href="BoardMain.jsp"><button>뒤로가기</button></a></td>
+										</tr>
 									</table>
-
-									<a href="Main.jsp"><button id="writer">홈으로가기</button></a> 
-									<a href="BoardWrite.jsp"><button id="writer">작성하러가기</button></a>
 								</div>
 							</article>
 
