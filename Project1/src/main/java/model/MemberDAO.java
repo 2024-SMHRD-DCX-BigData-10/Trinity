@@ -14,7 +14,6 @@ public class MemberDAO {
 		session.close();
 		return row;
 	}
-
 	public MemberDTO login(MemberDTO dto) {
 		SqlSession session = sqlSessionFactory.openSession(true);
 		
@@ -22,5 +21,6 @@ public class MemberDAO {
 		session.close();
 		
 		return user;
+	
 	}
 }
