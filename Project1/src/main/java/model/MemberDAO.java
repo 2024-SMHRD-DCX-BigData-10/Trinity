@@ -30,5 +30,13 @@ public class MemberDAO {
 		session.close();
 		return memList;
 	}
-	
+	public boolean idCheck(String id) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		String name = session.selectOne("idCheck", id);
+		if (name != null)
+			return true;
+		else
+			return false;
+	}
+
 }
