@@ -7,10 +7,11 @@
   		INSERT INTO tbl_member (mem_id, mem_pw, mem_name, mem_email, mem_gender, mem_birthdate, mem_type, mem_join_dt) VALUES (#{id}, #{pw}, #{name},#{email}, #{gender}, #{birthday}, '1', sysdate)
   	</insert>
   	<select id="idCheck" parameterType="String" resultType="String">
-  	select email from web_member where email = #{email}
+  	select mem_id from tbl_member where mem_id = #{id}
   	</select>
   	<select id="login" parameterType="MemberDTO" resultType="MemberDTO">
-  	select mem_id, mem_pw, mem_name, mem_email, mem_gender, mem_birthdate from tbl_member where mem_id = #{id} and mem_pw=#{pw}
+  	SELECT mem_id AS id, mem_pw AS pw, mem_name AS name, mem_email AS email, mem_gender AS gender, mem_birthdate AS birthday
+        FROM tbl_member WHERE mem_id = #{id} AND mem_pw = #{pw}
   	</select>
   	<update id="update" parameterType="MemberDTO" >
   	update web_member set pw=#{pw}, tel=#{tel}, address = #{address} where email=#{email}

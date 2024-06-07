@@ -19,7 +19,6 @@ public class MemberDAO {
 		
 		MemberDTO user = session.selectOne("login", dto);
 		session.close();
-		
 		return user;
 	
 	}
