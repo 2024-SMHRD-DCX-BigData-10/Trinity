@@ -10,7 +10,7 @@
   	select email from web_member where email = #{email}
   	</select>
   	<select id="login" parameterType="MemberDTO" resultType="MemberDTO">
-  	select * from tbl_member where mem_id = #{id} and mem_pw=#{pw}
+  	select mem_id, mem_pw, mem_name, mem_email, mem_gender, mem_birthdate from tbl_member where mem_id = #{id} and mem_pw=#{pw}
   	</select>
   	<update id="update" parameterType="MemberDTO" >
   	update web_member set pw=#{pw}, tel=#{tel}, address = #{address} where email=#{email}

@@ -22,13 +22,13 @@ public class LoginCon implements Command {
 		   // 데이터 꺼내오기
 		      String id = request.getParameter("id");
 		      String pw = request.getParameter("pw");
-		      
+		      System.out.println("id ="+id);
+		      System.out.println("pw ="+pw);
 		      // DTO로 묶기
 		      MemberDTO dto = new MemberDTO(id, pw);
-		      
 		      // 로그인 기능이 있는 login메소드 호출
 		      MemberDTO user_info = new MemberDAO().login(dto);
-		      
+		     System.out.println(user_info);
 		      // 실행결과 확인
 		      if (user_info != null) {
 		         System.out.println("로그인 성공");
