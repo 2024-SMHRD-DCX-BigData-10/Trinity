@@ -13,6 +13,7 @@ import controller.Command;
 import Conclass.BoardService;
 import Conclass.JoinCon;
 import Conclass.LoginCon;
+import Conclass.LogoutCon;
 
 
 
@@ -37,6 +38,7 @@ public class frontController extends HttpServlet {
 		list = new HashMap<String, Command>();
 		list.put("/JoinCon.do", new JoinCon());
 		list.put("/LoginCon.do", new LoginCon());
+		list.put("/LogoutCon.do", new LogoutCon());
 		list.put("/BoardService.do", new BoardService());
 		/*
 		 * list.put("/loginCon.do", new loginCon()); list.put("/BoardService.do", new

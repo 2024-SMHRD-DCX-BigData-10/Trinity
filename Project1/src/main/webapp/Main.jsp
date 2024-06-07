@@ -1,3 +1,4 @@
+<%@page import="model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
@@ -44,6 +45,9 @@
 		</style>
 	</head>
 	<body class="is-preload">
+	<%
+	MemberDTO user_info = (MemberDTO)session.getAttribute("user_info");
+	%>
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -51,9 +55,13 @@
 						
 					<!-- Logo -->
 						<h1><a href="Main.jsp" id="logo"> <Strong>농부 초기자본계산 사이트</Strong></a></h1>
-						<button id="sign"><a href="Join.jsp" id="join">회원가입</a></button>
-						<button id="login"><a href="Login.html" id="login">로그인</a></button>
+						<% if(user_info !=null){%>
 						<button id="mypage"><a href="Mypage.html" id="mypage">마이페이지</a></button>
+						<button id="mypage"><a href="LogoutCon.do" id="mypage">로그아웃</a></button>
+										<%} else{%>
+						<button id="sign"><a href="Join.jsp"  id="join">회원가입</a></button>
+						<button id="login"><a href="Login.html"  id="login">로그인</a></button>
+						<%} %>
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
