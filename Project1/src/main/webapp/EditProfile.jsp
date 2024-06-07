@@ -20,10 +20,15 @@
 </head>
 <body class="is-preload">
 	<%
-	MemberDTO user_info = (MemberDTO)session.getAttribute("user_info");
-			
+	MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
+	String gen = null;
+			if(user_info.getGender().equals("m")){
+		gen="남자";
+	}else{
+		gen="여자";
+	}
 	%>
-	
+
 
 	<div id="page-wrapper">
 
@@ -100,30 +105,71 @@
 
 							<article>
 								<header>
-									<h2>내 정보 조회</h2>
+									<h2>회원정보 수정</h2>
 								</header>
 
 								<table>
 									<tr>
-										<td><h2>회원정보</h2></td>
+										<td><h2>내 정보 수정</h2></td>
 									</tr>
-									<tr>
-										<td>ID</td>
-										<td>Pw</td>
-										<td>닉네임</td>
-										<td>이메일</td>
-										<td>성별</td>
-										<td>생일</td>
-									</tr>
-									<tr>
-										<td><%=user_info.getId()%></td>
-										<td><%= user_info.getPw() %></td>
-										<td><%= user_info.getName() %></td>
-										<td><%= user_info.getEmail() %></td>
-										<td><%= user_info.getGender() %></td>
-										<td><%= user_info.getBirthday()%></td>
-									</tr>
-									
+
+									<form action="JoinCon.do" method="post">
+										<table>
+											<tr>
+												<td>ID</td>
+												<td><%= user_info.getId()%></td>
+											</tr>
+											
+											<tr>
+												<td>비밀번호</td>
+											</tr>
+											<tr>
+												<td><input type="password" class="text" name="pw"></td>
+											</tr>
+											<tr id="tr1">
+												<td>&nbsp</td>
+											</tr>
+											<tr>
+												<td>비밀번호 확인</td>
+											</tr>
+											<tr>
+												<td><input type="password" class="text" name="pw1"></td>
+											</tr>
+											<tr id="tr1">
+												<td>&nbsp</td>
+											</tr>
+											<tr>
+												<td>닉네임</td>
+											</tr>
+											<tr>
+												<td><input type="text" class="text" name="name"></td>
+											</tr>
+											<tr id="tr1">
+												<td>&nbsp</td>
+											</tr>
+											<tr>
+												<td>이메일</td>
+											</tr>
+											<tr>
+												<td><input type="text" class="email" name="email"></td>
+											</tr>
+											<tr>
+												<td>성별</td>
+												<td><%=gen%></td>
+											</tr>
+											<tr id="tr1">
+												<td>&nbsp</td>
+											</tr>
+											<tr>
+												<td>생년월일</td>
+												<td><%=user_info.getBirthday()%></td>
+											</tr>
+											<tr>
+												<td><input type="submit" value="가입하기" class="btn"></td>
+											</tr>
+										</table>
+									</form>
+
 								</table>
 
 
