@@ -38,5 +38,10 @@ public class MemberDAO {
 		else
 			return false;
 	}
-
+	public int update(MemberDTO dto) {
+		 SqlSession session = sqlSessionFactory.openSession(true);
+		 int row = session.update("update",dto);
+		 session.close();
+			return row;
+	}
 }

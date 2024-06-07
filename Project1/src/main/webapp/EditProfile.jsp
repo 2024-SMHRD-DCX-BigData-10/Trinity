@@ -27,6 +27,8 @@
 	}else{
 		gen="여자";
 	}
+		String id	= user_info.getId();
+		session.setAttribute("id", id);
 	%>
 
 

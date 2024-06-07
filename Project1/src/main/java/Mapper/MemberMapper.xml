@@ -14,7 +14,7 @@
         FROM tbl_member WHERE mem_id = #{id} AND mem_pw = #{pw}
   	</select>
   	<update id="update" parameterType="MemberDTO" >
-  	update web_member set pw=#{pw}, tel=#{tel}, address = #{address} where email=#{email}
+  	update tbl_member set mem_pw=#{pw}, mem_name=#{name}, mem_email = #{email} where mem_id=#{id}
   	</update>
 	<select id="selectMember" resultType="MemberDTO">
 		select  from tbl_member 

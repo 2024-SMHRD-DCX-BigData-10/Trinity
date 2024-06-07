@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import controller.Command;
 import Conclass.BoardService;
+import Conclass.EditCon;
 import Conclass.JoinCon;
 import Conclass.LoginCon;
 import Conclass.LogoutCon;
@@ -47,6 +48,7 @@ public class frontController extends HttpServlet {
 		list.put("/LogoutCon.do", new LogoutCon());
 		list.put("/idcheckCon.do", new idcheckCon());
 		list.put("/BoardService.do", new BoardService());
+		list.put("/EditCon.do", new EditCon());
 		/*
 		 * list.put("/loginCon.do", new loginCon()); list.put("/BoardService.do", new
 		 * BoardService()); list.put("/DeleteCon.do", new DeleteCon());

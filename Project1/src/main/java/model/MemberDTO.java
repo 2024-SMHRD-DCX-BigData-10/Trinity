@@ -12,6 +12,12 @@ import lombok.RequiredArgsConstructor;
 @Getter
 
 public class MemberDTO {
+public MemberDTO(String id ,String pw, String name, String email) {
+		this.id=id;
+		this.pw=pw;
+		this.name=name;
+		this.email=email;
+	}
 @NonNull private String id;
 @NonNull private String pw;
 private String name;
