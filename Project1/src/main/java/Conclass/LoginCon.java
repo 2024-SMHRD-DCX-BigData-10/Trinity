@@ -25,7 +25,7 @@ public class LoginCon implements Command {
 		      System.out.println("id ="+id);
 		      System.out.println("pw ="+pw);
 		      // DTO로 묶기
-		      MemberDTO dto = new MemberDTO(id, pw);
+		      MemberDTO dto = new MemberDTO(id,pw);
 		      // 로그인 기능이 있는 login메소드 호출
 		      MemberDTO user_info = new MemberDAO().login(dto);
 		     System.out.println(user_info);
