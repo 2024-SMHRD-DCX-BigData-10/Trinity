@@ -105,24 +105,28 @@ button{
 			<tr>
 				<td><input type="password" class="text" name="pw"></td>
 			</tr>
+			<tr id="tr1"> <td>&nbsp</td> </tr>
 			<tr>
 				<td>비밀번호 확인</td>
 			</tr>
 			<tr>
 				<td><input type="password" class="text" name="pw1"></td>
 			</tr>
+			<tr id="tr1"> <td>&nbsp</td> </tr>
 			<tr>
 				<td>닉네임</td>
 			</tr>
 			<tr>
 				<td><input type="text" class="text" name="name"></td>
 			</tr>
+			<tr id="tr1"> <td>&nbsp</td> </tr>
 			<tr>
 				<td>생년월일</td>
 			</tr>
 			<tr>
 				<td><input type="date" class="text" name="birthday"></td>
 			</tr>
+			<tr id="tr1"> <td>&nbsp</td> </tr>
 			<tr>
 				<td>성별</td>
 			</tr>
@@ -132,12 +136,14 @@ button{
 						<option value="m">남자</option>
 						<option value="f">여자</option></td>
 			</tr>
+			<tr id="tr1"> <td>&nbsp</td> </tr>
 			<tr>
 				<td>이메일</td>
 			</tr>
 			<tr>
 				<td><input type="text" class="email" name="email"></td>
 			</tr>
+			<tr id="tr1"> <td>&nbsp</td> </tr>
 			<tr>
 				<td><input type="submit" value="가입하기" class="btn"></td>
 			</tr>
