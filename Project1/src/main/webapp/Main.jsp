@@ -65,7 +65,7 @@
 					<!-- Logo -->
 						<h1><a href="Main.jsp" id="logo"> <Strong>농부 초기자본계산 사이트</Strong></a></h1>
 						<% if(user_info !=null){%>
-						<button id="mypage"><a href="Mypage.html" id="mypage">마이페이지</a></button>
+						<button id="mypage"><a href="Mypage.jsp" id="mypage">마이페이지</a></button>
 						<button id="logout"><a href="LogoutCon.do" id="logout">로그아웃</a></button>
 										<%} else{%>
 						<button id="sign"><a href="Join.jsp"  id="join">회원가입</a></button>

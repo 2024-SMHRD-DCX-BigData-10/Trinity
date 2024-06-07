@@ -16,9 +16,9 @@
   	<update id="update" parameterType="MemberDTO" >
   	update web_member set pw=#{pw}, tel=#{tel}, address = #{address} where email=#{email}
   	</update>
-  	<select id="selectMember" resultType="MemberDTO">
-  	select * from web_member
-  	</select>
+	<select id="selectMember" resultType="MemberDTO">
+		select * from tbl_member
+	</select>
   	<delete id="memdel" parameterType="String">
   	delete from web_member where email=#{email}
   	</delete>
