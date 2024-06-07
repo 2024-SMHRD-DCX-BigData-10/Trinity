@@ -21,6 +21,7 @@
 <body class="is-preload">
 	<%
 	MemberDTO user_info = (MemberDTO)session.getAttribute("user_info");
+			
 	%>
 	
 
@@ -115,12 +116,12 @@
 										<td>생일</td>
 									</tr>
 									<tr>
-										<td><%user_info.getId();%></td>
-										<td><%user_info.getPw();%></td>
-										<td><%user_info.getName(); %></td>
-										<td><%user_info.getEmail(); %></td>
-										<td><%user_info.getGender(); %></td>
-										<td><%user_info.getBirthday(); %></td>
+										<td><%=user_info.getId()%></td>
+										<td><%= user_info.getPw() %></td>
+										<td><%= user_info.getName() %></td>
+										<td><%= user_info.getEmail() %></td>
+										<td><%= user_info.getGender() %></td>
+										<td><%= user_info.getBirthday()%></td>
 									</tr>
 									
 								</table>
