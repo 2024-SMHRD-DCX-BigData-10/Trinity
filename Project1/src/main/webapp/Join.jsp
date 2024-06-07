@@ -94,7 +94,9 @@ button{
 			</tr>
 			<tr id="tr1"> <td>&nbsp</td> </tr>
 			<tr>
-				<td> <button>아이디중복확인</button> </td>
+				<td> <button type="button" id="idcheck">아이디중복확인</button><br>
+				<span id="idC"> </span> </td>
+				
 			</tr>
 			<tr> <td>&nbsp</td> </tr>
 			<tr>
@@ -141,5 +143,31 @@ button{
 			</tr>
 		</table>
 	</form>
+	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+	
+	$('#idcheck').on('click',function(){
+		var id = $('input[name=id]').eq('0').val();
+		console.log(id);
+		$.ajax({
+			url : "idcheckCon.do",
+			type : 'get',
+			data : { /*보낼 데이터*/
+				id : id
+			},
+			dataType : "text",/* 실행 결과의 데이터 타입 */
+			success : function(result){
+				console.log(result)
+				$('#idC').html(result);
+			},
+			error : function(e){
+				console.log(e)
+			}
+			
+		});
+	
+	
+});
+</script>
 </body>
 </html>

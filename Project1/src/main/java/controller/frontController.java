@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 
 import javax.servlet.ServletException;
@@ -14,6 +15,7 @@ import Conclass.BoardService;
 import Conclass.JoinCon;
 import Conclass.LoginCon;
 import Conclass.LogoutCon;
+import Conclass.idcheckCon;
 
 
 
@@ -31,7 +33,11 @@ public class frontController extends HttpServlet {
 		Command con = list.get(ser);
 		String moveURL = con.excute(request, response);
 		
-		response.sendRedirect(moveURL);
+		 if(moveURL.contains("rest:/" )) {
+				PrintWriter out = response.getWriter();
+				out.print(moveURL.substring("rest:/".length()));
+			}else {
+		response.sendRedirect(moveURL);}
 	
 	}
 	public void init() throws ServletException {
@@ -39,6 +45,7 @@ public class frontController extends HttpServlet {
 		list.put("/JoinCon.do", new JoinCon());
 		list.put("/LoginCon.do", new LoginCon());
 		list.put("/LogoutCon.do", new LogoutCon());
+		list.put("/idcheckCon.do", new idcheckCon());
 		list.put("/BoardService.do", new BoardService());
 		/*
 		 * list.put("/loginCon.do", new loginCon()); list.put("/BoardService.do", new

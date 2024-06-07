@@ -22,4 +22,12 @@ public class MemberDAO {
 		return user;
 	
 	}
+	public boolean idCheck(String id) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		String name = session.selectOne("idCheck", id);
+		if (name != null)
+			return true;
+		else
+			return false;
+	}
 }
