@@ -113,27 +113,17 @@
 										<td><h2>내 정보 수정</h2></td>
 									</tr>
 
-									<form action="JoinCon.do" method="post">
+									<form action="EditCon.do" method="post">
 										<table>
 											<tr>
 												<td>ID</td>
 												<td><%= user_info.getId()%></td>
 											</tr>
-											
 											<tr>
 												<td>비밀번호</td>
 											</tr>
 											<tr>
 												<td><input type="password" class="text" name="pw"></td>
-											</tr>
-											<tr id="tr1">
-												<td>&nbsp</td>
-											</tr>
-											<tr>
-												<td>비밀번호 확인</td>
-											</tr>
-											<tr>
-												<td><input type="password" class="text" name="pw1"></td>
 											</tr>
 											<tr id="tr1">
 												<td>&nbsp</td>
@@ -165,7 +155,7 @@
 												<td><%=user_info.getBirthday()%></td>
 											</tr>
 											<tr>
-												<td><input type="submit" value="가입하기" class="btn"></td>
+												<td><input type="submit" value="변경하기" class="btn"></td>
 											</tr>
 										</table>
 									</form>
