@@ -21,7 +21,7 @@
 <body class="is-preload">
 	<%
 	MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
-	String gen = null;
+	String gen;
 			if(user_info.getGender().equals("m")){
 		gen="남자";
 	}else{
@@ -111,10 +111,6 @@
 								</header>
 
 								<table>
-									<tr>
-										<td><h2>내 정보 수정</h2></td>
-									</tr>
-
 									<form action="EditCon.do" method="post">
 										<table>
 											<tr>
@@ -122,7 +118,7 @@
 												<td><%= user_info.getId()%></td>
 											</tr>
 											<tr>
-												<td>비밀번호</td>
+												<td>변경할 비밀번호</td>
 											</tr>
 											<tr>
 												<td><input type="password" class="text" name="pw"></td>

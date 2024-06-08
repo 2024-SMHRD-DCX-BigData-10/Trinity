@@ -18,163 +18,174 @@
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
 <style type="text/css">
-		button#logout{
-		margin-left:1000px;
-		margin-bottom: 20px;
-		background-color: #9acd32;
-		}
-		
-		h1{
-			font-size: 30px;
-			color: black;
-			
-		}
-		a#logo{
-			color: black;
-			padding-bottom: 15px;
-		}
-		a#join{
-		color: black;
-		}
-		a#login{
-		color: black;
-		}
-		a#mypage{
-		color: black;
-		}
-		a#logout{
-		color: black;
-		}
-		p{
-		color: red;
-		}
-		</style>
+button#logout {
+	margin-left: 1000px;
+	margin-bottom: 20px;
+	background-color: #9acd32;
+}
+
+h1 {
+	font-size: 30px;
+	color: black;
+}
+
+a#logo {
+	color: black;
+	padding-bottom: 15px;
+}
+
+a#join {
+	color: black;
+}
+
+a#login {
+	color: black;
+}
+
+a#mypage {
+	color: black;
+}
+
+a#logout {
+	color: black;
+}
+
+p {
+	color: red;
+}
+</style>
 </head>
 <body class="is-preload">
 	<%
 	MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
+	String gen;
+	if (user_info.getGender().equals("m")) {
+		gen = "남자";
+	} else {
+		gen = "여자";
+	}
 	%>
 
 
 	<div id="page-wrapper"></div>
 
-		<!-- Header -->
-		<div id="header">
+	<!-- Header -->
+	<div id="header">
 
-			<!-- Logo -->
-			<h1>
-				<a href="Main.jsp" id="logo"> <Strong>농부 초기자본계산 사이트</Strong></a>
-			</h1>
-			
-			<%
-			if (user_info != null) {
-			%>
-			<button id="logout">
-				<a href="LogoutCon.do" id="logout">로그아웃</a>
-			</button>
-			<%
-			} else {
-			%>
-			<button id="sign">
-				<a href="Join.jsp" id="join">회원가입</a>
-			</button>
-			<button id="login">
-				<a href="Login.html" id="login">로그인</a>
-			</button>
-			<%
-			}
-			%>
-			<!-- Nav -->
-			<nav id="nav">
-				<ul>
-					<li><a href="Main.jsp">Home</a></li>
-					<li><a href="Calculator.html">계산기</a></li>
-					<li><a href="BoardMain.jsp">게시판</a></li>
-					<li><a href="Notice.html">공지사항</a></li>
-				</ul>
-			</nav>
+		<!-- Logo -->
+		<h1>
+			<a href="Main.jsp" id="logo"> <Strong>농부 초기자본계산 사이트</Strong></a>
+		</h1>
 
-		</div>
+		<%
+		if (user_info != null) {
+		%>
+		<button id="logout">
+			<a href="LogoutCon.do" id="logout">로그아웃</a>
+		</button>
+		<%
+		} else {
+		%>
+		<button id="sign">
+			<a href="Join.jsp" id="join">회원가입</a>
+		</button>
+		<button id="login">
+			<a href="Login.html" id="login">로그인</a>
+		</button>
+		<%
+		}
+		%>
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				<li><a href="Main.jsp">Home</a></li>
+				<li><a href="Calculator.html">계산기</a></li>
+				<li><a href="BoardMain.jsp">게시판</a></li>
+				<li><a href="Notice.html">공지사항</a></li>
+			</ul>
+		</nav>
 
-		<!-- Main -->
-		<section class="wrapper style1">
-			<div class="container">
-				<div class="row gtr-200">
-					<div class="col-4 col-12-narrower">
-						<div id="sidebar">
+	</div>
 
-							<!-- Sidebar -->
+	<!-- Main -->
+	<section class="wrapper style1">
+		<div class="container">
+			<div class="row gtr-200">
+				<div class="col-4 col-12-narrower">
+					<div id="sidebar">
 
-							<section></section>
+						<!-- Sidebar -->
 
-							<section>
-								<h3>마이페이지</h3>
-								<ul class="links">
-									<li><a href="Mypage.jsp">내 정보 조회</a></li>
+						<section></section>
 
-									<li><a href="MemberDel.jsp">회원탈퇴</a></li>
-									<li><a href="#">내가 쓴 글</a></li>
-									<li><a href="#">내가 쓴 댓글</a></li>
-								</ul>
-								<footer> </footer>
-							</section>
+						<section>
+							<h3>마이페이지</h3>
+							<ul class="links">
+								<li><a href="Mypage.jsp">내 정보 조회</a></li>
 
-						</div>
+								<li><a href="MemberDel.jsp">회원탈퇴</a></li>
+								<li><a href="#">내가 쓴 글</a></li>
+								<li><a href="#">내가 쓴 댓글</a></li>
+							</ul>
+							<footer> </footer>
+						</section>
+
 					</div>
-					<div class="col-8  col-12-narrower imp-narrower">
-						<div id="content">
+				</div>
+				<div class="col-8  col-12-narrower imp-narrower">
+					<div id="content">
 
-							<!-- Content -->
+						<!-- Content -->
 
-							<article>
-								<header>
-									<h2>내 정보 조회</h2>
-								</header>
+						<article>
+							<header>
+								<h2>내 정보 조회</h2>
+							</header>
 
-								<table>
-									<tr>
-										<td><h2>회원정보</h2></td>
-									</tr>
-									<tr>
-										<td>ID</td>
-										<td>Pw</td>
-										<td>닉네임</td>
-										<td>이메일</td>
-										<td>성별</td>
-										<td>생일</td>
-									</tr>
-									<tr>
-										<td><%=user_info.getId()%></td>
-										<td><%=user_info.getPw()%></td>
-										<td><%=user_info.getName()%></td>
-										<td><%=user_info.getEmail()%></td>
-										<td><%=user_info.getGender()%></td>
-										<td><%=user_info.getBirthday()%></td>
-									</tr>
+							<table>
+								<tr>
+									<td><h2>회원정보</h2></td>
+								</tr>
+								<tr>
+									<td>ID</td>
+									<td>Pw</td>
+									<td>닉네임</td>
+									<td>이메일</td>
+									<td>성별</td>
+									<td>생일</td>
+								</tr>
+								<tr>
+									<td><%=user_info.getId()%></td>
+									<td><%=user_info.getPw()%></td>
+									<td><%=user_info.getName()%></td>
+									<td><%=user_info.getEmail()%></td>
+									<td><%=gen%></td>
+									<td><%=user_info.getBirthday()%></td>
+								</tr>
 
-								</table>
+							</table>
 
-								<a href="EditProfile.jsp">
-									<button>회원정보 수정</button>
-								</a>
+							<a href="EditProfile.jsp">
+								<button>회원정보 수정</button>
+							</a>
 
-							</article>
+						</article>
 
-						</div>
 					</div>
 				</div>
 			</div>
-			
-		</section>
-		
+		</div>
+
+	</section>
 
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.dropotron.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 </body>
 </html>
