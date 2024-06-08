@@ -25,12 +25,13 @@
 		background-color: #9acd32;
 		}
 		button#mypage{
-			margin-left: 10px;
-			background-color: #9acd32;
+			margin-left:1000px;
+		margin-bottom: 20px;
+		background-color: #9acd32;
 		}
 		button#logout{
-			margin-left: 10px;
-			background-color: #9acd32;
+			margin-left:10px;
+		background-color: #9acd32;
 		}
 		h1{
 			font-size: 30px;

@@ -17,13 +17,41 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
+<style type="text/css">
+		button#logout{
+		margin-left:1000px;
+		margin-bottom: 20px;
+		background-color: #9acd32;
+		}
+		
+		h1{
+			font-size: 30px;
+			color: black;
+			
+		}
+		a#logo{
+			color: black;
+			padding-bottom: 15px;
+		}
+		a#join{
+		color: black;
+		}
+		a#login{
+		color: black;
+		}
+		a#mypage{
+		color: black;
+		}
+		a#logout{
+		color: black;
+		}
+		</style>
 </head>
 <body class="is-preload">
 	<%
-	MemberDTO user_info = (MemberDTO)session.getAttribute("user_info");
-			
+	MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
 	%>
-	
+
 
 	<div id="page-wrapper">
 
@@ -34,13 +62,10 @@
 			<h1>
 				<a href="Main.jsp" id="logo"> <Strong>농부 초기자본계산 사이트</Strong></a>
 			</h1>
-			<h2>마이페이지</h2>
+			
 			<%
 			if (user_info != null) {
 			%>
-			<button id="mypage">
-				<a href="Mypage.jsp" id="mypage">마이페이지</a>
-			</button>
 			<button id="logout">
 				<a href="LogoutCon.do" id="logout">로그아웃</a>
 			</button>
@@ -83,7 +108,7 @@
 								<h3>마이페이지</h3>
 								<ul class="links">
 									<li><a href="Mypage.jsp">내 정보 조회</a></li>
-									
+
 									<li><a href="#">회원탈퇴</a></li>
 									<li><a href="#">내가 쓴 글</a></li>
 									<li><a href="#">내가 쓴 댓글</a></li>
@@ -117,16 +142,18 @@
 									</tr>
 									<tr>
 										<td><%=user_info.getId()%></td>
-										<td><%= user_info.getPw() %></td>
-										<td><%= user_info.getName() %></td>
-										<td><%= user_info.getEmail() %></td>
-										<td><%= user_info.getGender() %></td>
-										<td><%= user_info.getBirthday()%></td>
+										<td><%=user_info.getPw()%></td>
+										<td><%=user_info.getName()%></td>
+										<td><%=user_info.getEmail()%></td>
+										<td><%=user_info.getGender()%></td>
+										<td><%=user_info.getBirthday()%></td>
 									</tr>
-									
+
 								</table>
-	
-	<a href="EditProfile.jsp"> <button>회원정보 수정</button> </a>
+
+								<a href="EditProfile.jsp">
+									<button>회원정보 수정</button>
+								</a>
 
 							</article>
 
