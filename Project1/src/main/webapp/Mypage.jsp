@@ -45,6 +45,9 @@
 		a#logout{
 		color: black;
 		}
+		p{
+		color: red;
+		}
 		</style>
 </head>
 <body class="is-preload">
@@ -53,7 +56,7 @@
 	%>
 
 
-	<div id="page-wrapper">
+	<div id="page-wrapper"></div>
 
 		<!-- Header -->
 		<div id="header">
@@ -109,7 +112,7 @@
 								<ul class="links">
 									<li><a href="Mypage.jsp">내 정보 조회</a></li>
 
-									<li><a href="#">회원탈퇴</a></li>
+									<li><a href="MemberDel.jsp">회원탈퇴</a></li>
 									<li><a href="#">내가 쓴 글</a></li>
 									<li><a href="#">내가 쓴 댓글</a></li>
 								</ul>
@@ -161,8 +164,9 @@
 					</div>
 				</div>
 			</div>
+			
 		</section>
-
+		
 
 
 		<!-- Scripts -->
