@@ -44,4 +44,10 @@ public class MemberDAO {
 		 session.close();
 			return row;
 	}
+	public int delete(String id) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		int row = session.insert("delete",id);
+		 session.close();
+			return row;
+	}
 }

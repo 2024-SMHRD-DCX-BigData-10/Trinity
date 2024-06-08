@@ -16,6 +16,7 @@ import Conclass.EditCon;
 import Conclass.JoinCon;
 import Conclass.LoginCon;
 import Conclass.LogoutCon;
+import Conclass.MemberDelCon;
 import Conclass.idcheckCon;
 
 
@@ -49,6 +50,7 @@ public class frontController extends HttpServlet {
 		list.put("/idcheckCon.do", new idcheckCon());
 		list.put("/BoardService.do", new BoardService());
 		list.put("/EditCon.do", new EditCon());
+		list.put("/MemberDelCon.do", new MemberDelCon());
 		/*
 		 * list.put("/loginCon.do", new loginCon()); list.put("/BoardService.do", new
 		 * BoardService()); list.put("/DeleteCon.do", new DeleteCon());

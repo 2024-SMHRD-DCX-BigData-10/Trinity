@@ -19,7 +19,7 @@
 	<select id="selectMember" resultType="MemberDTO">
 		select  from tbl_member 
 	</select>
-  	<delete id="memdel" parameterType="String">
-  	delete from web_member where email=#{email}
+  	<delete id="delete" parameterType="String">
+  	delete from tbl_member where mem_id=#{id}
   	</delete>
   </mapper>
