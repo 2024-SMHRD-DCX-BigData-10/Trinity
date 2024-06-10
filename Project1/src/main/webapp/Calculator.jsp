@@ -69,6 +69,9 @@
 			<%
 			if (user_info != null) {
 			%>
+			<button id="mypage">
+				<a href="Mypage.jsp" id="mypage">마이페이지</a>
+			</button>
 			<button id="logout">
 				<a href="LogoutCon.do" id="logout">로그아웃</a>
 			</button>
@@ -108,14 +111,7 @@
 							<section></section>
 
 							<section>
-								<h3>마이페이지</h3>
-								<ul class="links">
-									<li><a href="Mypage.jsp">내 정보 조회</a></li>
 
-									<li><a href="MemberDel.jsp">회원탈퇴</a></li>
-									<li><a href="#">내가 쓴 글</a></li>
-									<li><a href="#">내가 쓴 댓글</a></li>
-								</ul>
 								<footer> </footer>
 							</section>
 
