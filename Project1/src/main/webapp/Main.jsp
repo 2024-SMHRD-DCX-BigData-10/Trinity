@@ -86,7 +86,7 @@ a#logout {
 			if (user_info != null) {
 			%>
 			<%
-			if (user_info.getEmail().equals("admin")) {
+			if (user_info.getId().equals("admin")) {
 			%>
 			<button id="admin"><a href="adminpage.jsp">관리자 페이지</a></button> 
 			<button id="logout">
