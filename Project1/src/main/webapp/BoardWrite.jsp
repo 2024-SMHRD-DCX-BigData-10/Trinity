@@ -1,3 +1,4 @@
+<%@page import="model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
@@ -15,6 +16,17 @@
 <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body class="is-preload">
+<%
+
+MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
+if (user_info==null){%>
+	<script type="text/javascript">
+		alert("로그인 하세요. ");
+		location.href = "./Login.jsp";
+	</script>
+<%
+/* response.sendRedirect("Main.jsp"); */
+} %>
 	<div id="page-wrapper">
 
 		<!-- Header -->

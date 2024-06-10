@@ -109,7 +109,7 @@ h3{
 			%>
 			<button id="admin"><a href="adminpage.jsp">관리자 페이지</a></button> 
 			<button id="logout">
-				<a href="LogoutCon.do" id="logout">로그아웃</a>
+				<a href="LogoutCon.do" id="Logout">로그아웃</a>
 			</button>
 			 
 			<%} else {%>
