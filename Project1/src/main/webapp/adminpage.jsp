@@ -157,9 +157,7 @@ a#logout {
 
 							</table>
 
-							<a href="EditProfile.jsp">
-								<button>회원정보 수정</button>
-							</a>
+							
 
 						</article>
 
