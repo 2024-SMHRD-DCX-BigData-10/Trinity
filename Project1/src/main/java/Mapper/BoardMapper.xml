@@ -5,7 +5,7 @@
   
   <mapper namespace="mapper.BoardMapper">
   <insert id="writeBoard" parameterType="BoardVO">
-  	insert into tbl_board values
+  	insert into tbl_board (mem_id,b_title,b_file,b_content,b_write_dt) values
   	(#{id},#{title},#{filename},#{content},sysdate)
   </insert>
   <select id="allBoard" resultType="BoardVO">

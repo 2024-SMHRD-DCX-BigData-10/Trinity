@@ -17,7 +17,7 @@
 </head>
 <body class="is-preload">
 <%
-
+String id = null;
 MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
 if (user_info==null){%>
 	<script type="text/javascript">
@@ -25,8 +25,10 @@ if (user_info==null){%>
 		location.href = "./Login.jsp";
 	</script>
 <%
-/* response.sendRedirect("Main.jsp"); */
-} %>
+} else{
+	 id = user_info.getId();
+}
+%>
 	<div id="page-wrapper">
 
 		<!-- Header -->
@@ -98,7 +100,7 @@ if (user_info==null){%>
 
 								<span class="image featured"><img src="images/banner.jpg"
 									alt="" /></span>
-
+							
 								<div id="board">
 									<form action="BoardService.do" method="post"
 										enctype="multipart/form-data">
@@ -109,7 +111,9 @@ if (user_info==null){%>
 											</tr>
 											<tr>
 												<td>작성자</td>
-												<td><%=user_info.getName() %></td>
+												<td>
+												<input type="hidden" NAME="id" value="<%=id%>"><%=id%>
+												</td>
 											</tr>
 											<tr>
 											<td>첨부파일</td>

@@ -16,7 +16,6 @@ static SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	public int writeBoard(BoardVO vo) {
 		int cnt = 0;
 		SqlSession session = sqlSessionFactory.openSession(true);
-		
 		cnt = session.insert("writeBoard", vo);
 		session.close();
 		return cnt;
