@@ -142,6 +142,7 @@ p {
                         <h2>내 정보 조회</h2>
                      </header>
 
+
                      <table>
                         <tr>
                            <td><h2>회원정보</h2></td>
@@ -164,8 +165,7 @@ p {
                            <td><%=user_info.getBirthday()%></td>
                            <td><%=user_info.getSignday()%></td>
                         </tr>
-
-                     </table>
+							
 
                      <a href="EditProfile.jsp">
                         <button>회원정보 수정</button>
