@@ -18,7 +18,7 @@ public class LoginCon implements Command {
 	public String excute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("[LoginCon]");
-	      
+	      String url=null;
 		   // 데이터 꺼내오기
 		      String id = request.getParameter("id");
 		      String pw = request.getParameter("pw");
@@ -34,10 +34,13 @@ public class LoginCon implements Command {
 		         System.out.println("로그인 성공");
 		         HttpSession session = request.getSession();
 		        session.setAttribute("user_info", user_info);
+		        url="LoginSu.jsp";
 		      } else {
 		         System.out.println("로그인 실패");
+			        url="LoginFa.jsp";
+
 		      }
-			return "Main.jsp";
+			return url;
 	}
 
 }

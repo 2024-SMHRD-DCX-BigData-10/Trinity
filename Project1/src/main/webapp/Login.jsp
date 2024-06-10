@@ -31,5 +31,8 @@
 			<li><input type="submit" value="로그인"></li>
 		</ul>
 	</form>
+	<script type="text/javascript">
+		
+	</script>
 </body>
 </html>
