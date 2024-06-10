@@ -136,19 +136,19 @@
 										<td><h2>계산기</h2></td>
 									</tr>
 								</table>
-								<form action="">
+								<form action="CalCon.do">
 								<table>
 									<tr>
 										<td> 지역 </td>
 										<td> <select name="local">
-											<option value=""> 경기 </option>	
-											<option value=""> 강원 </option>
-											<option value=""> 충북 </option>
-											<option value=""> 충남 </option>
-											<option value=""> 전북 </option>
-											<option value=""> 전남 </option>
-											<option value=""> 경북 </option>
-											<option value=""> 경남 </option>
+											<option value="경기"> 경기 </option>	
+											<option value="강원"> 강원 </option>
+											<option value="충북"> 충북 </option>
+											<option value="충남"> 충남 </option>
+											<option value="전북"> 전북 </option>
+											<option value="전남"> 전남 </option>
+											<option value="경북"> 경북 </option>
+											<option value="경남"> 경남 </option>
 											</select></td>
 									</tr>
 									<tr>
@@ -157,24 +157,24 @@
 									</tr>
 									<tr>
 										<td> 기를작물 </td>
-										<td> <select>
-											<option> 고추 </option>
-											<option> 배추 </option>
-											<option> 무 </option>
+										<td> <select name="seed">
+											<option value="고추"> 고추 </option>
+											<option value="배추"> 배추 </option>
+											<option value="무"> 무 </option>
 										</select> </td>
 									</tr>
 									<tr>
 										<td> 농약사용여부 </td>
-										<td> <select>
-											<option> 사용 </option>
-											<option> 미사용 </option>
+										<td> <select name="pesticide">
+											<option value="yes"> 사용 </option>
+											<option value="no"> 미사용 </option>
 										</select> </td>
 									</tr>
 									<tr>
 										<td> 농기구 </td>
-										<td> <select>
-											<option> 사용 </option>
-											<option> 미사용 </option>
+										<td> <select name="machine">
+											<option value="yes"> 사용 </option>
+											<option value="no"> 미사용 </option>
 										</select> </td>
 									</tr>
 									<tr>
