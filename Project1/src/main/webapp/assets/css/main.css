@@ -120,8 +120,12 @@ input, select, textarea {
 			border-bottom-color: transparent;
 		}
 
-	strong, b {
+	strong {
 		font-weight: 600;
+		color: #9acd32;
+	}
+	b{
+		color: black;
 	}
 
 	em, i {
