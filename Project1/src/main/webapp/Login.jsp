@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +22,7 @@
 </style>
 </head>
 <body>
-	<!-- 로그인 프로그램 만들기 -->
+<!-- 로그인 프로그램 만들기 -->
 	<form action="LoginCon.do" method="post">
 		<h2> <i>농초계 로그인</i> </h2>
 		<ul>
@@ -29,6 +31,5 @@
 			<li><input type="submit" value="로그인"></li>
 		</ul>
 	</form>
-	
 </body>
 </html>
