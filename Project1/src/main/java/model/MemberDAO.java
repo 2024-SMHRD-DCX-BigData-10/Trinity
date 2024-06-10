@@ -24,9 +24,9 @@ public class MemberDAO {
 		session.close();
 		return user;
 	}
-	public static ArrayList<MemberDTO> selectMember(){
+	public static ArrayList<MemberDTO> selectMember () {
 		SqlSession session = sqlSessionFactory.openSession(true);
-		ArrayList<MemberDTO>memList = (ArrayList)session.selectList("selectMember");
+		ArrayList<MemberDTO> memList =  (ArrayList)session.selectList("selectMember");
 		session.close();
 		return memList;
 	}
@@ -50,4 +50,5 @@ public class MemberDAO {
 		 session.close();
 			return row;
 	}
+	
 }

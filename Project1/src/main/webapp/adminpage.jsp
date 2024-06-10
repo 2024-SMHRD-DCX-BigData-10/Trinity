@@ -34,25 +34,10 @@ a#logo {
 	padding-bottom: 15px;
 }
 
-a#join {
-	color: black;
-}
-
-a#login {
-	color: black;
-}
-
-a#mypage {
-	color: black;
-}
-
 a#logout {
 	color: black;
 }
 
-p {
-	color: red;
-}
 </style>
 </head>
 <body class="is-preload">
@@ -65,7 +50,8 @@ p {
 		gen = "여자";
 	}
 	%>
-
+<c:set var="memList" value="${MemberDAO.selectMember()}">
+ </c:set>
 
 	<div id="page-wrapper"></div>
 
@@ -153,15 +139,21 @@ p {
 									<td>이메일</td>
 									<td>성별</td>
 									<td>생일</td>
+									<td>가입일자</td>
+									<td>삭제</td>
 								</tr>
+								<c:forEach items="${memList}" var="member">
 								<tr>
-									<td><%=user_info.getId()%></td>
-									<td><%=user_info.getPw()%></td>
-									<td><%=user_info.getName()%></td>
-									<td><%=user_info.getEmail()%></td>
-									<td><%=gen%></td>
-									<td><%=user_info.getBirthday()%></td>
+									<td>${member.id}</td>
+									<td>${member.pw}</td>
+									<td>${member.name}</td>
+									<td>${member.email}</td>
+									<td>${member.gender}</td>
+									<td>${member.birthday}</td>
+									<td>${member.signday}</td>
+									<td><a href="DelCon.do?id=${member.id}">삭제</a> </td>
 								</tr>
+								</c:forEach>
 
 							</table>
 
