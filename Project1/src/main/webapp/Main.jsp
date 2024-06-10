@@ -70,6 +70,22 @@ a#logout {
 a{
 	color: black;
 }
+img#cal{
+	width: 100px;
+	height: 100px;
+}
+img#farmer{
+	width: 100px;
+	height: 100px;
+}
+li{
+	list-style-type: none;
+	font-size: 25px;
+}
+h3{
+	font-size: 30px;
+	margin-left: 30px;
+}
 </style>
 </head>
 <body class="is-preload">
@@ -83,7 +99,7 @@ a{
 
 			<!-- Logo -->
 			<h1>
-				<a href="Main.jsp" id="logo"> <Strong>농부 초기자본계산 사이트</Strong></a>
+				<a href="Main.jsp" id="logo"><img alt="" src="./images/farmer.jpg" id="farmer"><Strong>농부 초기자본계산 사이트</Strong><img alt="" src="./images/cal.jpg" id="cal"></a>
 			</h1>
 			<%
 			if (user_info != null) {
@@ -132,15 +148,21 @@ a{
 
 		<!-- Banner -->
 		<section id="banner">
-			<header>
-				<h2>
-					Arcana: <em>A responsive site template freebie by <a
-						href="http://html5up.net">HTML5 UP</a></em>
-				</h2>
-				<a href="#" class="button">Learn More</a>
-			</header>
+					<header>
+						<h2>환영합니다!</h2>
+					</header>
 		</section>
-
+		
+		<h3> 사이트 이용안내 </h3>
+			<ul>
+				<li><b> 저희 사이트는 초기자본을 계산해줍니다.</b></li>
+				<li><b> 1. 회원가입 하기 </b></li>
+				<li><b> 2. 로그인 하기 </b></li>
+				<li><b> 3. 계산기 클릭한후 계산하세요. </b></li>
+				<li><b> 4. 게신판에는 사람들과 소통 및 공유를 할 수 있습니다. </b></li>
+				<li><b> 5. 가급적 게시판 이용시 안좋은 말은 삼가해주시면 좋겠습니다. </b></li><br>
+				<li><b><i> <strong> 저희는 예비농부들을 위해 최선을 다해 사이트의 도움이 되도록 노력하겠습니다.</strong></i> </b></li>
+			</ul>
 
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
