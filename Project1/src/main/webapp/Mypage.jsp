@@ -144,28 +144,30 @@ p {
 
 
                      <table>
+
                         <tr>
-                           <td><h2>회원정보</h2></td>
+                           <td>ID</td><td><%=user_info.getId()%></td>
                         </tr>
                         <tr>
-                           <td>ID</td>
-                           <td>Pw</td>
-                           <td>닉네임</td>
-                           <td>이메일</td>
-                           <td>성별</td>
-                           <td>생일</td>
-                           <td>가입일자</td>
+                        	<td>Pw</td><td><%=user_info.getPw()%></td>
                         </tr>
-                        <tr>
-                           <td><%=user_info.getId()%></td>
-                           <td><%=user_info.getPw()%></td>
-                           <td><%=user_info.getName()%></td>
-                           <td><%=user_info.getEmail()%></td>
-                           <td><%=gen%></td>
-                           <td><%=user_info.getBirthday()%></td>
-                           <td><%=user_info.getSignday()%></td>
+                         <tr>
+                        	<td>닉네임</td><td><%=user_info.getName()%></td>
                         </tr>
-							
+                         <tr>
+                        	<td>이메일</td><td><%=user_info.getEmail()%></td>
+                        </tr>
+                         <tr>
+                        	<td>성별</td> <td><%=gen%></td>
+                        </tr>
+                         <tr>
+                        	<td>생일</td><td><%=user_info.getBirthday()%></td>
+                        </tr>
+                         <tr>
+                        	<td>가입일자</td><td><%=user_info.getSignday()%></td>
+                        </tr>
+
+						</table>
 
                      <a href="EditProfile.jsp">
                         <button>회원정보 수정</button>

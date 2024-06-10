@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>농초계-로그인</title>
 <link rel="stylesheet" href="assets/css/main.css" />
 <style>
 	h2{
