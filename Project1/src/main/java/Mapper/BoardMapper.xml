@@ -9,7 +9,7 @@
   	(#{id},#{title},#{filename},#{content},sysdate)
   </insert>
   <select id="allBoard" resultType="BoardVO">
-  select * from tbl_board order by b_idx
+  select mem_id as id,b_title as title,b_file as filename ,b_content as content ,b_write_dt as b_date from tbl_board order by b_idx
   </select>
   <select id="detailBoard" resultType="BoardVO">
   select * from tbl_board where b_idx=#{num}

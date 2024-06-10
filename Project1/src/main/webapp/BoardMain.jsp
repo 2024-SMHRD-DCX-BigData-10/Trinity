@@ -91,7 +91,7 @@
 
 								<span class="image featured"><img src="images/banner.jpg"
 									alt="" /></span>
-									<% List<BoardVO> boards= new BoardDAO().allBoard();
+									<% ArrayList<BoardVO> boards= new BoardDAO().allBoard();
 									pageContext.setAttribute("boards",boards);
 									%>
 								<div id="board">
@@ -102,11 +102,11 @@
 											<td>작성자</td>
 											<td>시간</td>
 										</tr>
-										<!--varStatus: 상태변수 -->
+										<!--varStatus: 상태변수 -->	
 										<c:forEach var="b" items="${boards}" varStatus="s">
 											<tr>
 												<td>${s.count}</td>
-												<td><a href="BoardDetail.jsp?num=${b.num}">${b.title}</a></td>
+												<td>${b.title}</a></td>
 												<td>${b.id}</td>
 												<td>${b.b_date}</td>
 											</tr>

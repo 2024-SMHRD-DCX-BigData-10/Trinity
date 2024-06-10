@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -21,11 +22,11 @@ static SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 		return cnt;
 	}
 	//게시물 조회
-	public List<BoardVO> allBoard() {
-		List<BoardVO>boards = null;
+	public ArrayList<BoardVO> allBoard() {
+		ArrayList<BoardVO>boards = null;
 		
 		SqlSession session = sqlSessionFactory.openSession(true);
-		boards = session.selectList("allBoard");
+		boards = (ArrayList)session.selectList("allBoard");
 		session.close();
 		return boards;
 	}
