@@ -43,12 +43,7 @@ a#logout {
 <body class="is-preload">
 	<%
 	MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
-	String gen;
-	if (user_info.getGender().equals("m")) {
-		gen = "남자";
-	} else {
-		gen = "여자";
-	}
+	
 	%>
 <c:set var="memList" value="${MemberDAO.selectMember()}">
  </c:set>
@@ -63,24 +58,10 @@ a#logout {
 			<a href="Main.jsp" id="logo"> <Strong>농부 초기자본계산 사이트</Strong></a>
 		</h1>
 
-		<%
-		if (user_info != null) {
-		%>
 		<button id="logout">
 			<a href="LogoutCon.do" id="logout">로그아웃</a>
 		</button>
-		<%
-		} else {
-		%>
-		<button id="sign">
-			<a href="Join.jsp" id="join">회원가입</a>
-		</button>
-		<button id="login">
-			<a href="Login.html" id="login">로그인</a>
-		</button>
-		<%
-		}
-		%>
+		
 		<!-- Nav -->
 		<nav id="nav">
 			<ul>
@@ -111,7 +92,7 @@ a#logout {
 
 								<li><a href="#">게시물 조회</a></li>
 								<li><a href="#">댓글조회</a></li>
-								<li><a href="#">내가 쓴 댓글</a></li>
+								<li><a href="#">공지사항 작성하기</a></li>
 							</ul>
 							<footer> </footer>
 						</section>
@@ -130,7 +111,7 @@ a#logout {
 
 							<table>
 								<tr>
-									<td><h2>회원</h2></td>
+									<td><h2>회원삭제</h2></td>
 								</tr>
 								<tr>
 									<td>ID</td>
