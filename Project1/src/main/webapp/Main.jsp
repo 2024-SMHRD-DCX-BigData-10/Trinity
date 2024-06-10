@@ -67,6 +67,9 @@ a#mypage {
 a#logout {
 	color: black;
 }
+a{
+	color: black;
+}
 </style>
 </head>
 <body class="is-preload">
