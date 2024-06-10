@@ -126,7 +126,7 @@ p {
                         <li><a href="MemberDel.jsp">회원탈퇴</a></li>
                         <li><a href="#">게시글 작성 목록</a></li>
                         <li><a href="#">댓글 작성 목록</a></li>
-                        <li><a href="Cal_record">계산 기록</a></li>
+                        <li><a href="CalRecord">계산 기록</a></li>
                      </ul>
                      <footer> </footer>
                   </section>
@@ -140,39 +140,13 @@ p {
 
                   <article>
                      <header>
-                        <h2>내 정보 조회</h2>
+                        <h2>내 계산기록 조회</h2>
                      </header>
-
+					
 
                      <table>
 
-                        <tr>
-                           <td>ID</td><td><%=user_info.getId()%></td>
-                        </tr>
-                        <tr>
-                        	<td>Pw</td><td><%=user_info.getPw()%></td>
-                        </tr>
-                         <tr>
-                        	<td>닉네임</td><td><%=user_info.getName()%></td>
-                        </tr>
-                         <tr>
-                        	<td>이메일</td><td><%=user_info.getEmail()%></td>
-                        </tr>
-                         <tr>
-                        	<td>성별</td> <td><%=gen%></td>
-                        </tr>
-                         <tr>
-                        	<td>생일</td><td><%=user_info.getBirthday()%></td>
-                        </tr>
-                         <tr>
-                        	<td>가입일자</td><td><%=user_info.getSignday()%></td>
-                        </tr>
-
 						</table>
-
-                     <a href="EditProfile.jsp">
-                        <button>회원정보 수정</button>
-                     </a>
 
                   </article>
 
