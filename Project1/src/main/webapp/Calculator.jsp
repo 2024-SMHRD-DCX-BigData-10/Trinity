@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="assets/css/main.css" />
 <style type="text/css">
 		button#logout{
-		margin-left:1000px;
+		margin-left:10px;
 		margin-bottom: 20px;
 		background-color: #9acd32;
 		}
@@ -48,11 +48,23 @@
 		p{
 		color: red;
 		}
+		button#mypage{
+			margin-left: 1000px;
+			margin-bottom: 20px;
+		}
 		</style>
 </head>
 <body class="is-preload">
 	<%
 	MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
+	if(user_info==null){
+		%>
+		<script>alert('로그인하세요'); 
+		location.href='Login.jsp';</script>
+		
+		
+		<%
+	}
 	%>
 
 
