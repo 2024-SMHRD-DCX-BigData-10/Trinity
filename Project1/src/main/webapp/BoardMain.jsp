@@ -34,7 +34,7 @@
 			<nav id="nav">
 				<ul>
 					<li><a href="Main.jsp">Home</a></li>
-					<li><a href="Calculator.html">계산기</a></li>
+					<li><a href="Calculator.jsp">계산기</a></li>
 					<li class="current"><a href="BoardMain.jsp">게시판</a></li>
 					<li><a href="Notice.html">공지사항</a></li>
 				</ul>

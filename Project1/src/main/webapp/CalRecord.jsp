@@ -146,6 +146,24 @@ p {
 
                      <table>
 						<tr>
+							<td>지역</td>
+							<td>토지크기</td>
+							<td>기를 작물</td>
+							<td>농약 사용 여부</td>
+							<td>농기구</td>
+							<td>인력수</td>
+							<td>총 액수</td>
+						</tr>
+						<tr>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+						</tr>
+						<tr>
 							<td></td>
 						</tr>
 						<tr>
