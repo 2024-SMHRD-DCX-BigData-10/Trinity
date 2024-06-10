@@ -109,14 +109,18 @@ if (user_info==null){%>
 											</tr>
 											<tr>
 												<td>작성자</td>
-												<td><input type="text" name="writer"></td>
+												<td><%=user_info.getName() %></td>
+											</tr>
+											<tr>
+											<td>첨부파일</td>
+											<td><input type="file" name="filename"
+													style="float: right;">
 											</tr>
 											<tr>
 												<td colspan="2">내용</td>
 											</tr>
-											<tr>
-												<td colspan="2"><input type="file" name="filename"
-													style="float: right;"> <textarea rows="10"
+											<tr><td colspan="2">
+												 <textarea rows="10"
 														name="content" style="resize: none;"></textarea></td>
 											</tr>
 											<tr>
