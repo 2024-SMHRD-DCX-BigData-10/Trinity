@@ -145,7 +145,7 @@
 									</tr>
 								</table>
 								<form action="CalCon.do">
-								<table>
+								<table border="1">
 									<tr>
 										<td> 지역 </td>
 										<td> <select name="local">
@@ -159,10 +159,12 @@
 											<option value="경남"> 경남 </option>
 											</select></td>
 									</tr>
+									<tr id="tr1"> <td>&nbsp</td> </tr>
 									<tr>
 										<td> 토지크기 </td>
 										<td><input type="number" name="size">평</td>
 									</tr>
+									<tr id="tr1"> <td>&nbsp</td> </tr>
 									<tr>
 										<td> 기를작물 </td>
 										<td> <select name="seed">
@@ -171,6 +173,7 @@
 											<option value="무"> 무 </option>
 										</select> </td>
 									</tr>
+									<tr id="tr1"> <td>&nbsp</td> </tr>
 									<tr>
 										<td> 농약사용여부 </td>
 										<td> <select name="pesticide">
@@ -178,6 +181,7 @@
 											<option value="no"> 미사용 </option>
 										</select> </td>
 									</tr>
+									<tr id="tr1"> <td>&nbsp</td> </tr>
 									<tr>
 										<td> 농기구 </td>
 										<td> <select name="machine">
@@ -185,10 +189,12 @@
 											<option value="no"> 미사용 </option>
 										</select> </td>
 									</tr>
+									<tr id="tr1"> <td>&nbsp</td> </tr>
 									<tr>
 										<td> 인력수 </td>
 										<td><input type="number" name="people">명</td>
 									</tr>
+									<tr id="tr1"> <td>&nbsp</td> </tr>
 									<tr>
 										<td colspan="2"> <input type="submit" value="계산하기"></td>
 									</tr>
