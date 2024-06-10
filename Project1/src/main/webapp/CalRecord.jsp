@@ -126,7 +126,7 @@ p {
                         <li><a href="MemberDel.jsp">회원탈퇴</a></li>
                         <li><a href="#">게시글 작성 목록</a></li>
                         <li><a href="#">댓글 작성 목록</a></li>
-                        <li><a href="CalRecord">계산 기록</a></li>
+                        <li><a href="Cal_record">계산 기록</a></li>
                      </ul>
                      <footer> </footer>
                   </section>

@@ -113,7 +113,7 @@ a{
 				<a href="Join.jsp" id="join">회원가입</a>
 			</button>
 			<button id="login">
-				<a href="Login.html" id="login">로그인</a>
+				<a href="Login.jsp" id="login">로그인</a>
 			</button>
 			<%
 			}
