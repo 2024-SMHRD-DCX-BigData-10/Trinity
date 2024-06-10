@@ -12,7 +12,7 @@
 -->
 <html>
 <head>
-<title>농초계-마이페이지</title>
+<title>농초계-관리자 페이지</title>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -121,10 +121,10 @@ p {
 						<section>
 							<h3>마이페이지</h3>
 							<ul class="links">
-								<li><a href="Mypage.jsp">내 정보 조회</a></li>
+								<li><a href="adminpage.jsp">회원 정보 조회</a></li>
 
-								<li><a href="MemberDel.jsp">회원탈퇴</a></li>
-								<li><a href="#">내가 쓴 글</a></li>
+								<li><a href="#">게시물 조회</a></li>
+								<li><a href="#">댓글조회</a></li>
 								<li><a href="#">내가 쓴 댓글</a></li>
 							</ul>
 							<footer> </footer>
@@ -139,12 +139,12 @@ p {
 
 						<article>
 							<header>
-								<h2>내 정보 조회</h2>
+								<h2>회원 정보 조회</h2>
 							</header>
 
 							<table>
 								<tr>
-									<td><h2>회원정보</h2></td>
+									<td><h2>회원</h2></td>
 								</tr>
 								<tr>
 									<td>ID</td>
@@ -153,7 +153,6 @@ p {
 									<td>이메일</td>
 									<td>성별</td>
 									<td>생일</td>
-									<td>가입일자</td>
 								</tr>
 								<tr>
 									<td><%=user_info.getId()%></td>
@@ -162,7 +161,6 @@ p {
 									<td><%=user_info.getEmail()%></td>
 									<td><%=gen%></td>
 									<td><%=user_info.getBirthday()%></td>
-									<td><%=user_info.getSignday()%></td>
 								</tr>
 
 							</table>

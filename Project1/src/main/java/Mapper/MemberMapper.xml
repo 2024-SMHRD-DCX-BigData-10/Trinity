@@ -10,7 +10,7 @@
   	select mem_id as id from tbl_member where mem_id = #{id}
   	</select>
   	<select id="login" parameterType="MemberDTO" resultType="MemberDTO">
-  	SELECT mem_id AS id, mem_pw AS pw, mem_name AS name, mem_email AS email, mem_gender AS gender, mem_birthdate AS birthday
+  	SELECT mem_id AS id, mem_pw AS pw, mem_name AS name, mem_email AS email, mem_gender AS gender, mem_birthdate AS birthday, mem_join_dt AS signday
         FROM tbl_member WHERE mem_id = #{id} AND mem_pw = #{pw}
   	</select>
   	<update id="update" parameterType="MemberDTO" >
