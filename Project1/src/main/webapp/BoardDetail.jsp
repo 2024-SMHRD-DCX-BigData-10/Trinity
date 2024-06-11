@@ -1,9 +1,14 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="model.CommentDAO"%>
+<%@page import="java.util.List"%>
 <%@page import="model.MemberDTO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="model.BoardDAO"%>
 <%@page import="model.BoardVO"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@page import="model.CommentVO"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false" language="java"
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <!--
 	Arcana by HTML5 UP
@@ -100,10 +105,10 @@ img.contentimg {
 								<%
 								int num = Integer.parseInt(request.getParameter("num"));
 								BoardVO board = new BoardDAO().detailBoard(num);
-								System.out.print(board.toString());
-								
 								MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
-								
+
+								ArrayList<CommentVO> cvo = new CommentDAO().allcoment(board.getB_idx());
+								pageContext.setAttribute("cvo",cvo);
 								%>
 								<div id="board">
 									<table>
@@ -129,19 +134,37 @@ img.contentimg {
 											</td>
 										</tr>
 									</table>
+									<p>댓글</p>
+									<table>
+										<tr>
+											<td>작성자</td>
+											<td>댓글</td>
+											<td>삭제</td>
+										</tr>
+										<c:forEach var="b" items="${cvo}">
+											<tr>
+												<td>${b.mem_id }</td>
+												<td>${b.comment_content }</td>
+												<td>삭제</td>
+											</tr>
+										</c:forEach>
+									</table>
 									<form action="CommentWrite.do" method="post">
 										<table>
 											<tr>
-												<td>댓글<input type="hidden" NAME="mem_id" value="<%=user_info.getId()%>">
-												<input type="hidden" NAME="b_idx" value="<%=board.getB_idx()%>">
+												<td>댓글<input type="hidden" NAME="mem_id"
+													value="<%=user_info.getId()%>"> <input
+													type="hidden" NAME="b_idx" value="<%=board.getB_idx()%>">
 												</td>
 												<td><input type="text" maxlength='400' name="content"></td>
 												<td><input type="submit" value="작성하기"></td>
 											</tr>
 										</table>
 									</form>
-								<button><a href="BoardMain.jsp">뒤로가기</a></button>
-										
+									<button>
+										<a href="BoardMain.jsp">뒤로가기</a>
+									</button>
+
 								</div>
 							</article>
 

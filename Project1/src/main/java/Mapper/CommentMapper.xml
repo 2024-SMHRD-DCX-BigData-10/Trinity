@@ -7,4 +7,7 @@
   	insert into tbl_comment (b_idx,comment_content,comment_date,mem_id) values
   	(#{b_idx},#{comment_content},sysdate,#{mem_id})
   </insert>
+  <select id="allcoment" parameterType="String" resultType="CommentVO">
+select * from tbl_comment where b_idx=#{num}  
+  </select>
    </mapper>

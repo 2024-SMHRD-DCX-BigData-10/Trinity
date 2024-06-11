@@ -1,5 +1,9 @@
 package model;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -13,5 +17,13 @@ public class CommentDAO {
 		cnt = session.insert("writeComment", cvo);
 		session.close();
 		return cnt;
+	}
+	
+	public ArrayList<CommentVO> allcoment(String num){
+		ArrayList<CommentVO> cvo = null;
+		SqlSession session = sqlSessionFactory.openSession(true);
+		cvo  = (ArrayList)session.selectList("allcoment", num);
+		session.close();
+		return cvo;
 	}
 }
