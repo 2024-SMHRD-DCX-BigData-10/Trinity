@@ -20,6 +20,12 @@ public class CommentVO {
 		this.mem_id=mem_id;
 		
 	}
+	public CommentVO(String comment_id,String mem_id) {
+		
+		this.comment_id=comment_id;
+		this.mem_id=mem_id;
+		
+	}
 	private String comment_id;
  @NonNull	private String b_idx;
  @NonNull	private String comment_content;

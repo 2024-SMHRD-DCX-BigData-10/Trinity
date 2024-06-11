@@ -26,4 +26,12 @@ public class CommentDAO {
 		session.close();
 		return cvo;
 	}
+
+	public int comdelete(CommentVO cvo) {
+SqlSession session = sqlSessionFactory.openSession(true);
+		int row = session.insert("comdelete",cvo);
+		 session.close();
+			return row;
+		
+	}
 }

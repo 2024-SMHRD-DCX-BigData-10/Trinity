@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import controller.Command;
 import Conclass.BoardService;
 import Conclass.CalCon;
+import Conclass.CommentDel;
 import Conclass.CommentWrite;
 import Conclass.DelCon;
 import Conclass.EditCon;
@@ -60,6 +61,7 @@ public class frontController extends HttpServlet {
 		list.put("/DelCon.do", new DelCon());
 		list.put("/CommentWrite.do", new CommentWrite());
 		list.put("/CalCon.do", new CalCon());
+		list.put("/CommentDel.do", new CommentDel());
 		/*
 		 * list.put("/loginCon.do", new loginCon()); list.put("/BoardService.do", new
 		 * BoardService()); list.put("/DeleteCon.do", new DeleteCon());

@@ -10,4 +10,7 @@
   <select id="allcoment" parameterType="String" resultType="CommentVO">
 select * from tbl_comment where b_idx=#{num}  
   </select>
+  <delete id="comdelete" parameterType="CommentVO">
+  	delete from tbl_comment where comment_id=#{comment_id} and mem_id=#{mem_id}
+  	</delete>
    </mapper>

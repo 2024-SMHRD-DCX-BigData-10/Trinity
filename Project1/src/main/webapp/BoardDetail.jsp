@@ -159,7 +159,7 @@ h1{
 											<tr>
 												<td>${b.mem_id }</td>
 												<td>${b.comment_content }</td>
-												<td>삭제</td>
+												<td><a href="CommentDel.do?com_id=${b.comment_id }&mem_id=<%=user_info.getId()%>">삭제</a></td>
 											</tr>
 										</c:forEach>
 									</table>
