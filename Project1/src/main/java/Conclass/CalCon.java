@@ -27,8 +27,9 @@ public class CalCon implements Command {
 		int people = Integer.parseInt(request.getParameter("people"));
 		
 		
-		MachineDTO dto = new MachineDTO(seed);
-		ArrayList<Integer>mac = new MachineDAO().Mc_cost(dto);
+		MachineDTO dto1 = new MachineDTO(seed);
+		LocalDTO dto2 = new LocalDTO(local);
+		ArrayList<Integer>mac = new MachineDAO().Mc_cost(dto1);
 		int result_mc=0;
 		for(int i=0;i<mac.size();i++) {
 			result_mc+= mac.get(i);
