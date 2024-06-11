@@ -29,10 +29,6 @@
 			color: black;
 			
 		}
-		a#logo{
-			color: black;
-			padding-bottom: 15px;
-		}
 		a#join{
 		color: black;
 		}
@@ -51,6 +47,16 @@
 		button#mypage{
 			margin-left: 1000px;
 			margin-bottom: 20px;
+		}
+		.title{
+ 			font-size: 72px;
+  			background: linear-gradient(to bottom, green, yellow);
+  			-webkit-background-clip: text;
+ 			-webkit-text-fill-color: transparent;
+		}
+		img#cal{
+			width: 100px;
+			height: 100px;
 		}
 		</style>
 </head>
@@ -73,7 +79,7 @@
 
 			<!-- Logo -->
 			<h1>
-				<a href="Main.jsp" id="logo"> <Strong>농부 초기자본계산 사이트</Strong></a>
+				<a href="Main.jsp" class="title"> <Strong>농부 초기자본계산 사이트</Strong><img alt="" src="./images/cal.jpg" id="cal"></a>
 			</h1>
 			
 			<%

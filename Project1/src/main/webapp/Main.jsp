@@ -102,7 +102,7 @@ h3{
 
 			<!-- Logo -->
 			<h1>
-				<a href="Main.jsp" class="title"><img alt="" src="./images/farmer.jpg" id="farmer"><Strong>농부 초기자본계산 사이트</Strong><img alt="" src="./images/cal.jpg" id="cal"></a>
+				<a href="Main.jsp" class="title"><Strong>농부 초기자본계산 사이트</Strong><img alt="" src="./images/cal.jpg" id="cal"></a>
 			</h1>
 			<%
 			if (user_info != null) {
