@@ -106,7 +106,7 @@
 										<c:forEach var="b" items="${boards}" varStatus="s">
 											<tr>
 												<td>${s.count}</td>
-												<td>${b.title}</a></td>
+												<td><a href="BoardDetail.jsp?num=${b.b_idx}">${b.title}</a></td>
 												<td>${b.id}</td>
 												<td>${b.b_date}</td>
 											</tr>

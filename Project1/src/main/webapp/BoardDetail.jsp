@@ -16,6 +16,12 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
+<style type="text/css">
+img.contentimg{
+width: 50%;
+height: 50%;
+}
+</style>
 </head>
 <body class="is-preload">
 	<div id="page-wrapper">
@@ -114,8 +120,8 @@
 										</tr>
 										<tr>
 											<td colspan="2">
-												<h3><%=board.getContent()%></h3> <img alt=""
-												src="./file/<%=board.getFilename()%>">
+												<h5><%=board.getContent()%></h5> <img alt=""
+												src="./file/<%=board.getFilename()%>" class="contentimg">
 											</td>
 										</tr>
 										<tr>

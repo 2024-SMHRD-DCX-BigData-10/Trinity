@@ -12,6 +12,7 @@ import lombok.ToString;
 @Getter
 @ToString
 public class BoardVO {
+	private String b_idx;
 	@NonNull private String id;
 	@NonNull private String title;
 	@NonNull private String filename;
