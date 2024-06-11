@@ -88,6 +88,7 @@ li{
 h3{
 	font-size: 30px;
 	margin-left: 30px;
+	margin-bottom: 15px;
 }
 </style>
 </head>
@@ -156,7 +157,7 @@ h3{
 					</header>
 		</section>
 		
-		<h3> 사이트 이용안내 </h3>
+		<!-- <h3> [사이트 이용안내] </h3>
 			<ul>
 				<li><b> 저희 사이트는 초기자본을 계산해줍니다.</b></li>
 				<li><b> 1. 회원가입 하기 </b></li>
@@ -165,7 +166,7 @@ h3{
 				<li><b> 4. 게신판에는 사람들과 소통 및 공유를 할 수 있습니다. </b></li>
 				<li><b> 5. 가급적 게시판 이용시 안좋은 말은 삼가해주시면 좋겠습니다. </b></li><br>
 				<li><b><i> <strong> 저희는 예비농부들을 위해 최선을 다해 사이트의 도움이 되도록 노력하겠습니다.</strong></i> </b></li>
-			</ul>
+			</ul> -->
 
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
