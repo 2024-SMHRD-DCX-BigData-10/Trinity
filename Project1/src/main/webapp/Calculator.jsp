@@ -138,18 +138,14 @@
 
 							<!-- Content -->
 
-							<article>
-								<header>
-									<h2>초기자본 계산기</h2>
-								</header>
 
 								<table>
 									<tr>
-										<td><h2>계산기</h2></td>
+										<td><h2>초기자본 계산기</h2></td>
 									</tr>
 								</table>
 								<form action="CalCon.do" method="post">
-								<table border="1">
+								<table>
 									<tr>
 										<td> 지역 </td>
 										<td> <select name="local">
@@ -207,7 +203,6 @@
 
 								
 
-							</article>
 
 						</div>
 					</div>
@@ -215,8 +210,6 @@
 			</div>
 			
 		</section>
-		
-
 
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
