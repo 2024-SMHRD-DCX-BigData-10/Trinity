@@ -30,6 +30,14 @@ static SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 		session.close();
 		return boards;
 	}
+	public ArrayList<BoardVO> myBoard(String id) {
+		ArrayList<BoardVO>boards = null;
+		
+		SqlSession session = sqlSessionFactory.openSession(true);
+		boards = (ArrayList)session.selectList("myBoard", id);
+		session.close();
+		return boards;
+	}
 	// 게시물 상세 조회
 	
 	public BoardVO detailBoard(int num) {
