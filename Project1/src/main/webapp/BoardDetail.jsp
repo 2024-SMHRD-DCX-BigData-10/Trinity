@@ -27,23 +27,29 @@ img.contentimg {
 	width: 50%;
 	height: 50%;
 }
-.title{
- 	font-size: 72px;
-  	background: linear-gradient(to bottom, green, yellow);
-  	-webkit-background-clip: text;
- 	-webkit-text-fill-color: transparent;
+
+.title {
+	font-size: 72px;
+	background: linear-gradient(to bottom, green, yellow);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
-img#cal{
+
+img#cal {
 	width: 100px;
 	height: 100px;
 }
-h1{
+
+h1 {
 	font-size: 30px;
 	color: black;
 }
 </style>
 </head>
 <body class="is-preload">
+	<%
+	MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
+	%>
 	<div id="page-wrapper">
 
 		<!-- Header -->
@@ -51,7 +57,8 @@ h1{
 
 			<!-- Logo -->
 			<h1>
-				<a href="Main.jsp" class="title"> <Strong>농부 초기자본계산 사이트</Strong><img alt="" src="./images/cal.jpg" id="cal"></a>
+				<a href="Main.jsp" class="title"> <Strong>농부 초기자본계산 사이트</Strong><img
+					alt="" src="./images/cal.jpg" id="cal"></a>
 			</h1>
 
 			<!-- Nav -->
@@ -119,10 +126,9 @@ h1{
 								<%
 								int num = Integer.parseInt(request.getParameter("num"));
 								BoardVO board = new BoardDAO().detailBoard(num);
-								MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
 
 								ArrayList<CommentVO> cvo = new CommentDAO().allcoment(board.getB_idx());
-								pageContext.setAttribute("cvo",cvo);
+								pageContext.setAttribute("cvo", cvo);
 								%>
 								<div id="board">
 									<table>
@@ -159,10 +165,14 @@ h1{
 											<tr>
 												<td>${b.mem_id }</td>
 												<td>${b.comment_content }</td>
-												<td><a href="CommentDel.do?com_id=${b.comment_id }&mem_id=<%=user_info.getId()%>">삭제</a></td>
+												<td><a
+													href="CommentDel.do?com_id=${b.comment_id }&mem_id=<%=user_info.getId()%>">삭제</a></td>
 											</tr>
 										</c:forEach>
 									</table>
+									<%
+									if (user_info != null) {
+									%>
 									<form action="CommentWrite.do" method="post">
 										<table>
 											<tr>
@@ -175,6 +185,24 @@ h1{
 											</tr>
 										</table>
 									</form>
+
+									<%
+									}else{
+									%>
+									<form action="" method="post">
+										<table>
+											<tr>
+												<td>댓글
+												</td>
+												<td><input type="text" maxlength='400' name="content" placeholder="로그인하세요"></td>
+												<td><input type="submit" value="작성하기"></td>
+											</tr>
+										</table>
+									</form>
+									
+									<%
+									}
+									%>
 									<button>
 										<a href="BoardMain.jsp">뒤로가기</a>
 									</button>
