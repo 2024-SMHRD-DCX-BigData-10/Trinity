@@ -1,3 +1,4 @@
+<%@page import="model.MemberDTO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="model.BoardDAO"%>
 <%@page import="model.BoardVO"%>
@@ -17,9 +18,9 @@
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
 <style type="text/css">
-img.contentimg{
-width: 50%;
-height: 50%;
+img.contentimg {
+	width: 50%;
+	height: 50%;
 }
 </style>
 </head>
@@ -100,6 +101,9 @@ height: 50%;
 								int num = Integer.parseInt(request.getParameter("num"));
 								BoardVO board = new BoardDAO().detailBoard(num);
 								System.out.print(board.toString());
+								
+								MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
+								
 								%>
 								<div id="board">
 									<table>
@@ -124,10 +128,20 @@ height: 50%;
 												src="./file/<%=board.getFilename()%>" class="contentimg">
 											</td>
 										</tr>
-										<tr>
-											<td colspan="2"><a href="BoardMain.jsp"><button>뒤로가기</button></a></td>
-										</tr>
 									</table>
+									<form action="CommentWrite.do" method="post">
+										<table>
+											<tr>
+												<td>댓글<input type="hidden" NAME="mem_id" value="<%=user_info.getId()%>">
+												<input type="hidden" NAME="b_idx" value="<%=board.getB_idx()%>">
+												</td>
+												<td><input type="text" maxlength='400' name="content"></td>
+												<td><input type="submit" value="작성하기"></td>
+											</tr>
+										</table>
+									</form>
+								<button><a href="BoardMain.jsp">뒤로가기</a></button>
+										
 								</div>
 							</article>
 

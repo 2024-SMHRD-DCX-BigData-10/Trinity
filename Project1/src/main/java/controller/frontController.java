@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import controller.Command;
 import Conclass.BoardService;
+import Conclass.CommentWrite;
 import Conclass.DelCon;
 import Conclass.EditCon;
 import Conclass.JoinCon;
@@ -39,6 +40,9 @@ public class frontController extends HttpServlet {
 		 if(moveURL.contains("rest:/" )) {
 				PrintWriter out = response.getWriter();
 				out.print(moveURL.substring("rest:/".length()));
+			}else if(moveURL.contains("com" )) {
+				moveURL=moveURL.substring(3);
+				response.sendRedirect("BoardDetail.jsp?num="+moveURL+"");
 			}else {
 		response.sendRedirect(moveURL);}
 	
@@ -53,6 +57,7 @@ public class frontController extends HttpServlet {
 		list.put("/EditCon.do", new EditCon());
 		list.put("/MemberDelCon.do", new MemberDelCon());
 		list.put("/DelCon.do", new DelCon());
+		list.put("/CommentWrite.do", new CommentWrite());
 		/*
 		 * list.put("/loginCon.do", new loginCon()); list.put("/BoardService.do", new
 		 * BoardService()); list.put("/DeleteCon.do", new DeleteCon());

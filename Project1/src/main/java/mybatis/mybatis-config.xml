@@ -9,6 +9,7 @@
 	<typeAliases>
 		<typeAlias type="model.MemberDTO" alias="MemberDTO"/>
 		<typeAlias type="model.BoardVO" alias="BoardVO"/>
+		<typeAlias type="model.CommentVO" alias="CommentVO"/>
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
@@ -25,5 +26,6 @@
 	<mappers>
 		<mapper resource="Mapper/MemberMapper.xml" />
 		<mapper resource="Mapper/BoardMapper.xml" />
+		<mapper resource="Mapper/CommentMapper.xml" />
 	</mappers>
 </configuration>
