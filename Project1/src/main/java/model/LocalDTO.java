@@ -8,5 +8,5 @@ import lombok.ToString;
 @Getter
 @ToString
 public class LocalDTO {
-	private String region;
+	private String local;
 }
