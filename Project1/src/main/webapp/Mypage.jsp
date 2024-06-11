@@ -77,24 +77,10 @@ p {
          <a href="Main.jsp" id="logo"> <Strong>농부 초기자본계산 사이트</Strong></a>
       </h1>
 
-      <%
-      if (user_info != null) {
-      %>
-      <button id="logout">
+       <button id="logout">
          <a href="LogoutCon.do" id="logout">로그아웃</a>
       </button>
-      <%
-      } else {
-      %>
-      <button id="sign">
-         <a href="Join.jsp" id="join">회원가입</a>
-      </button>
-      <button id="login">
-         <a href="Login.jsp" id="login">로그인</a>
-      </button>
-      <%
-      }
-      %>
+      
       <!-- Nav -->
       <nav id="nav">
          <ul>
