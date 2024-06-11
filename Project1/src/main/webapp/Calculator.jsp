@@ -59,10 +59,8 @@
 	MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
 	if(user_info==null){
 		%>
-		<script>alert('로그인하세요'); 
+		<script>alert('로그인정보가 필요합니다.'); 
 		location.href='Login.jsp';</script>
-		
-		
 		<%
 	}
 	%>
@@ -144,7 +142,7 @@
 										<td><h2>계산기</h2></td>
 									</tr>
 								</table>
-								<form action="CalCon.do">
+								<form action="CalCon.do" method="post">
 								<table border="1">
 									<tr>
 										<td> 지역 </td>
