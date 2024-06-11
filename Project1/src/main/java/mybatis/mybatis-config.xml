@@ -11,6 +11,7 @@
 		<typeAlias type="model.BoardVO" alias="BoardVO"/>
 		<typeAlias type="model.CommentVO" alias="CommentVO"/>
 		<typeAlias type="model.MachineDTO" alias="MachineDTO"/>
+		<typeAlias type="model.LocalDTO" alias="LocalDTO"/>
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
@@ -29,5 +30,6 @@
 		<mapper resource="Mapper/BoardMapper.xml" />
 		<mapper resource="Mapper/CommentMapper.xml" />
 		<mapper resource="Mapper/CalMapper.xml" />
+		<mapper resource="Mapper/LocalMapper.xml" />
 	</mappers>
 </configuration>

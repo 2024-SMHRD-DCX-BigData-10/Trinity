@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import controller.Command;
 import model.CalDTO;
+import model.LocalDTO;
 import model.MachineDAO;
 import model.MachineDTO;
 
