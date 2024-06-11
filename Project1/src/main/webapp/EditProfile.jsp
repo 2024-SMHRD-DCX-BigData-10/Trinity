@@ -17,6 +17,22 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
+<style type="text/css">
+.title{
+ 	font-size: 72px;
+  	background: linear-gradient(to bottom, green, yellow);
+  	-webkit-background-clip: text;
+ 	-webkit-text-fill-color: transparent;
+}
+img#cal{
+	width: 50px;
+	height: 50px;
+}
+h1 {
+   font-size: 30px;
+   color: black;
+}
+</style>
 </head>
 <body class="is-preload">
 	<%
@@ -39,7 +55,7 @@
 
 			<!-- Logo -->
 			<h1>
-				<a href="Main.jsp" id="logo"> <Strong>농부 초기자본계산 사이트</Strong></a>
+				<a href="Main.jsp" class="title"> <Strong>농부 초기자본계산 사이트</Strong> <img alt="" src="./images/cal.jpg" id="cal"></a>
 			</h1>
 			<h2>마이페이지</h2>
 			<%

@@ -22,8 +22,8 @@
  	-webkit-text-fill-color: transparent;
 	}
 	img#cal{
-		width: 100px;
-		height: 100px;
+		width: 50px;
+		height: 50px;
 	}
 	h1{
 			font-size: 30px;
@@ -53,7 +53,7 @@ if (user_info==null){%>
 
 			<!-- Logo -->
 			<h1>
-				<a href="Main.jsp" class="title"> <Strong>농부 초기자본계산 사이트</Strong><img alt="" src="./images/cal.jpg" id="cal"></a>
+				<a href="Main.jsp" class="title"> <Strong>농부 초기자본계산 사이트</Strong> <img alt="" src="./images/cal.jpg" id="cal"></a>
 			</h1>
 
 			<!-- Nav -->
