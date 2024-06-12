@@ -158,7 +158,7 @@
 									<tr id="tr1"> <td>&nbsp</td> </tr>
 									<tr>
 										<td> 토지크기 </td>
-										<td><input type="number" name="size">평</td>
+										<td><input type="number" name="size" min=0>㎡</td>
 									</tr>
 									<tr id="tr1"> <td>&nbsp</td> </tr>
 									<tr>
@@ -175,7 +175,8 @@
 										<td> <select name="pesticide">
 											<option value="yes"> 사용 </option>
 											<option value="no"> 미사용 </option>
-										</select> </td>
+											</select> 
+										</td>
 									</tr>
 									<tr id="tr1"> <td>&nbsp</td> </tr>
 									<tr>
@@ -186,11 +187,7 @@
 										</select> </td>
 									</tr>
 									<tr id="tr1"> <td>&nbsp</td> </tr>
-									<tr>
-										<td> 인력수 </td>
-										<td><input type="number" name="people">명</td>
-									</tr>
-									<tr id="tr1"> <td>&nbsp</td> </tr>
+
 									<tr>
 										<td colspan="2"> <input type="submit" value="계산하기"></td>
 									</tr>
@@ -214,5 +211,10 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		
+		<script type="text/javascript">
+		
+		
+		</script>
 </body>
 </html>

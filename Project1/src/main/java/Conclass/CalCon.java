@@ -14,6 +14,8 @@ import model.LocalDAO;
 import model.LocalDTO;
 import model.MachineDAO;
 import model.MachineDTO;
+import model.SeedDAO;
+import model.SeedDTO;
 
 public class CalCon implements Command {
 
@@ -25,13 +27,23 @@ public class CalCon implements Command {
 		String seed = request.getParameter("seed");
 		String pesticide = request.getParameter("pesticide");
 		String machine = request.getParameter("machine");
-		int people = Integer.parseInt(request.getParameter("people"));
-		
 
+		
+		
 		MachineDTO dto1 = new MachineDTO(seed);
 		LocalDTO dto2 = new LocalDTO(local);
+		SeedDTO dto3 = new SeedDTO(seed);
+		
+		
+		
+		//농기계가격
 		ArrayList<Integer>mac = new MachineDAO().Mc_cost(dto1);
-		int LanPrice = new LocalDAO().Lan_cost(dto2);
+		//농지 가격
+		int LanPrice = new LocalDAO().Lan_cost(dto2)*size;
+		//종자 가격
+		int SeedPrice = new SeedDAO().Seed_cost(dto3);
+		
+		
 		int result_mc=0;
 		
 		
@@ -39,6 +51,7 @@ public class CalCon implements Command {
 			result_mc+= mac.get(i);
 		}
 		
+		System.out.println(SeedPrice);
 		
 		
 		return "CalResult.jsp";
