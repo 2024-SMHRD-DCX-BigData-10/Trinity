@@ -98,7 +98,7 @@ a#logout {
 								<li><a href="adminpage.jsp">회원 정보 조회</a></li>
 
 								<li><a href="adminViewB.jsp">게시물 조회</a></li>
-								<li><a href="#">댓글조회</a></li>
+								<li><a href="adminViewC.jsp">댓글조회</a></li>
 								<li><a href="#">공지사항 작성하기</a></li>
 							</ul>
 							<footer> </footer>

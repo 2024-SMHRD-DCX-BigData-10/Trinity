@@ -16,4 +16,7 @@ select * from tbl_comment where b_idx=#{num}
   	<select id="myComment" parameterType="String" resultType="CommentVO">
   	select * from tbl_comment where mem_id=#{id}
   	</select>
+  	<select id="adminViewC" resultType="CommentVO">
+  	select * from tbl_comment order by b_idx
+  	</select>
    </mapper>

@@ -41,4 +41,11 @@ SqlSession session = sqlSessionFactory.openSession(true);
 		session.close();
 		return cvo;
 	}
+	public ArrayList<CommentVO> adminViewC(){
+		ArrayList<CommentVO> cvo =null;
+		SqlSession session = sqlSessionFactory.openSession(true);
+		cvo = (ArrayList)session.selectList("adminViewC");
+		session.close();
+		return cvo;
+	}
 }

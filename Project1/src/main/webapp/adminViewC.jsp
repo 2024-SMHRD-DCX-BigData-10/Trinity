@@ -1,3 +1,7 @@
+<%@page import="model.CommentDAO"%>
+<%@page import="model.CommentVO"%>
+<%@page import="model.BoardDAO"%>
+<%@page import="model.BoardVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="model.MemberDTO"%>
 <%@ page import="model.MemberDAO"%>
@@ -111,37 +115,32 @@ a#logout {
 
 						<article>
 							<header>
-								<h2>회원 정보 조회</h2>
+								<h2>게시물 전체 조회/삭제</h2>
 							</header>
 
+							<% ArrayList<CommentVO> boards= new CommentDAO().adminViewC();
+									pageContext.setAttribute("boards",boards);
+									%>
 							<table>
-								<tr>
-									<td><h2>회원삭제</h2></td>
-								</tr>
-								<tr>
-									<td>ID</td>
-									<td>Pw</td>
-									<td>닉네임</td>
-									<td>이메일</td>
-									<td>성별</td>
-									<td>생일</td>
-									<td>가입일자</td>
-									<td>삭제</td>
-								</tr>
-								<c:forEach items="${memList}" var="member">
-								<tr>
-									<td>${member.id}</td>
-									<td>${member.pw}</td>
-									<td>${member.name}</td>
-									<td>${member.email}</td>
-									<td>${member.gender}</td>
-									<td>${member.birthday}</td>
-									<td>${member.signday}</td>
-									<td><a href="DelCon.do?id=${member.id}">삭제</a> </td>
-								</tr>
-								</c:forEach>
+										<tr>
+											<td>게시물 번호</td>
+											<td>댓글내용</td>
+											<td>작성자</td>
+											<td>시간</td>
+											<td>삭제<td>
+										</tr>
+										<!--varStatus: 상태변수 -->	
+										<c:forEach var="b" items="${boards}" varStatus="s">
+											<tr>
+												<td><a href="BoardDetail.jsp?num=${b.b_idx}">${b.b_idx}</a></td>
+												<td>${b.comment_content}</td>
+												<td>${b.mem_id}</td>
+												<td>${b.comment_date}</td>
+												<td> <a href="adminBoardDel.do?num=${b.b_idx}">삭제</a></td>
+											</tr>
+										</c:forEach>
 
-							</table>
+									</table>
 
 							
 
