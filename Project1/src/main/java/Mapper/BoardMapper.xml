@@ -17,4 +17,7 @@
   <select id="detailBoard" resultType="BoardVO">
   select b_idx, mem_id as id,b_title as title,b_file as filename ,b_content as content from tbl_board where b_idx=#{num}
   </select>
+  <delete id="adminBoardDel" parameterType="String">
+  delete from tbl_board where b_idx=#{num}
+  </delete>
   </mapper>
