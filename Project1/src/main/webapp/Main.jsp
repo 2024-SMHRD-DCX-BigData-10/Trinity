@@ -103,7 +103,7 @@ h3{
 
          <!-- Logo -->
          <h1>
-            <a href="Main.jsp" class="title"><Strong>농부 초기자본계산 사이트</Strong> <img alt="" src="./images/cal.jpg" id="cal"></a>
+            <a href="Main.jsp" class="title"><Strong>농부樂</Strong></a>
          </h1>
          <%
          if (user_info != null) {
@@ -153,7 +153,8 @@ h3{
       <!-- Banner -->
       <section id="banner">
                <header>
-                  <h2>환영합니다!</h2>
+                  <h2>환영합니다!</h2><br>
+                  <h2>Copyright 2024. Trinity 농부樂.all rights reserved. </h2>
                </header>
       </section>
       
