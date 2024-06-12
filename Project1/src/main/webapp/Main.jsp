@@ -95,7 +95,7 @@ h3{
 
          <!-- Logo -->
          <h1>
-            <a href="Main.jsp" class="title"><Strong>농부樂</Strong></a>
+            <a href="Main.jsp" class="title"><Strong>농부樂아</Strong></a>
          </h1>
          <%
          if (user_info != null) {
