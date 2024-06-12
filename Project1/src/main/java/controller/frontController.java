@@ -22,6 +22,7 @@ import Conclass.LoginCon;
 import Conclass.LogoutCon;
 import Conclass.MemberDelCon;
 import Conclass.adminBoardDel;
+import Conclass.adminComDel;
 import Conclass.idcheckCon;
 
 
@@ -64,6 +65,7 @@ public class frontController extends HttpServlet {
 		list.put("/CalCon.do", new CalCon());
 		list.put("/CommentDel.do", new CommentDel());
 		list.put("/adminBoardDel.do", new adminBoardDel());
+		list.put("/adminComDel.do", new adminComDel());
 		/*
 		 * list.put("/loginCon.do", new loginCon()); list.put("/BoardService.do", new
 		 * BoardService()); list.put("/DeleteCon.do", new DeleteCon());

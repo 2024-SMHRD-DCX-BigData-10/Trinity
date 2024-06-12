@@ -136,7 +136,7 @@ a#logout {
 												<td>${b.comment_content}</td>
 												<td>${b.mem_id}</td>
 												<td>${b.comment_date}</td>
-												<td> <a href="adminBoardDel.do?num=${b.b_idx}">삭제</a></td>
+												<td> <a href="adminComDel.do?num=${b.comment_id}">삭제</a></td>
 											</tr>
 										</c:forEach>
 

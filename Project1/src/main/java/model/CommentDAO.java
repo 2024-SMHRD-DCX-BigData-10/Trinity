@@ -48,4 +48,13 @@ SqlSession session = sqlSessionFactory.openSession(true);
 		session.close();
 		return cvo;
 	}
+
+	public int adminComDel(String num) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		int row = session.insert("adminComDel",num);
+		 session.close();
+			return row;
+		
+		
+	}
 }
