@@ -38,20 +38,19 @@ public class CalCon implements Command {
 		
 		//농기계가격
 		ArrayList<Integer>mac = new MachineDAO().Mc_cost(dto1);
+		int result_mc=0;
+		for(int i=0;i<mac.size();i++) {
+			result_mc+= mac.get(i);
+		}
 		//농지 가격
 		int LanPrice = new LocalDAO().Lan_cost(dto2)*size;
 		//종자 가격
 		int SeedPrice = new SeedDAO().Seed_cost(dto3);
 		
 		
-		int result_mc=0;
+	
+				
 		
-		
-		for(int i=0;i<mac.size();i++) {
-			result_mc+= mac.get(i);
-		}
-		
-		System.out.println(SeedPrice);
 		
 		
 		return "CalResult.jsp";
