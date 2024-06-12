@@ -73,14 +73,6 @@ a#logout {
 a{
    color: black;
 }
-img#cal{
-   width: 50px;
-   height: 50px;
-}
-img#farmer{
-   width: 100px;
-   height: 100px;
-}
 li{
    list-style-type: none;
    font-size: 25px;
