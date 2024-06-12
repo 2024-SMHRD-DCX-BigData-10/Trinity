@@ -8,7 +8,7 @@
 <%@page import="model.CommentVO"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page isELIgnored="false" language="java"
-	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isErrorPage="true" errorPage="Login.jsp"%>
 <!DOCTYPE HTML>
 <!--
 	Arcana by HTML5 UP
@@ -43,6 +43,7 @@ h1 {
 <body class="is-preload">
 	<%
 	MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
+	
 	%>
 	<div id="page-wrapper">
 
@@ -58,7 +59,7 @@ h1 {
 			<nav id="nav">
 				<ul>
 					<li><a href="Main.jsp">Home</a></li>
-					<li><a href="Calculator.html">계산기</a></li>
+					<li><a href="Calculator.jsp">계산기</a></li>
 					<li class="current"><a href="BoardMain.jsp">게시판</a></li>
 					<li><a href="Notice.html">공지사항</a></li>
 				</ul>

@@ -1,3 +1,7 @@
+<%@page import="model.CommentVO"%>
+<%@page import="model.CommentDAO"%>
+<%@page import="model.BoardDAO"%>
+<%@page import="model.BoardVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="model.MemberDTO"%>
 <%@ page import="model.MemberDAO"%>
@@ -44,19 +48,12 @@ a#logout {
  	-webkit-text-fill-color: transparent;
 }
 
-
-
 </style>
 </head>
 <body class="is-preload">
 	<%
 	MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
-	String gen;
-	if (user_info.getGender().equals("m")) {
-		gen = "남자";
-	} else {
-		gen = "여자";
-	}
+	
 	%>
 
 
@@ -119,44 +116,29 @@ a#logout {
 
 						<article>
 							<header>
-								<h2>내 정보 조회</h2>
+								<h2>내가 작성한 댓글</h2>
 							</header>
+							<% ArrayList<CommentVO> boards= new CommentDAO().myCommnet(user_info.getId());
+									pageContext.setAttribute("boards",boards);
+									%>
 							<table>
+										<tr>
+											<td>게시물 번호</td>
+											<td>댓글내용</td>
+											<td>작성자</td>
+											<td>시간</td>
+										</tr>
+										<!--varStatus: 상태변수 -->	
+										<c:forEach var="b" items="${boards}" varStatus="s">
+											<tr>
+												<td><a href="BoardDetail.jsp?num=${b.b_idx}">${b.b_idx}</a></td>
+												<td>${b.comment_content}</td>
+												<td>${b.mem_id}</td>
+												<td>${b.comment_date}</td>
+											</tr>
+										</c:forEach>
 
-								<tr>
-									<td>ID</td>
-									<td><%=user_info.getId()%></td>
-								</tr>
-								<tr>
-									<td>Pw</td>
-									<td><%=user_info.getPw()%></td>
-								</tr>
-								<tr>
-									<td>닉네임</td>
-									<td><%=user_info.getName()%></td>
-								</tr>
-								<tr>
-									<td>이메일</td>
-									<td><%=user_info.getEmail()%></td>
-								</tr>
-								<tr>
-									<td>성별</td>
-									<td><%=gen%></td>
-								</tr>
-								<tr>
-									<td>생일</td>
-									<td><%=user_info.getBirthday()%></td>
-								</tr>
-								<tr>
-									<td>가입일자</td>
-									<td><%=user_info.getSignday()%></td>
-								</tr>
-
-							</table>
-
-							<a href="EditProfile.jsp">
-								<button>회원정보 수정</button>
-							</a>
+									</table>
 
 						</article>
 

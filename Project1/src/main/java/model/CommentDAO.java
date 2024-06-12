@@ -34,4 +34,11 @@ SqlSession session = sqlSessionFactory.openSession(true);
 			return row;
 		
 	}
+	public ArrayList<CommentVO> myCommnet(String id){
+		ArrayList<CommentVO> cvo =null;
+		SqlSession session = sqlSessionFactory.openSession(true);
+		cvo = (ArrayList)session.selectList("myComment", id);
+		session.close();
+		return cvo;
+	}
 }

@@ -114,7 +114,7 @@ a#logout {
 
 						<article>
 							<header>
-								<h2>내 정보 조회</h2>
+								<h2>내가 작성한 글</h2>
 							</header>
 							<% ArrayList<BoardVO> boards= new BoardDAO().myBoard(user_info.getId());
 									pageContext.setAttribute("boards",boards);
