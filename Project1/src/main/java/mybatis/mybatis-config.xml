@@ -12,6 +12,7 @@
 		<typeAlias type="model.CommentVO" alias="CommentVO"/>
 		<typeAlias type="model.MachineDTO" alias="MachineDTO"/>
 		<typeAlias type="model.LocalDTO" alias="LocalDTO"/>
+		<typeAlias type="model.SeedDTO" alias="SeedDTO"/>
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
@@ -31,5 +32,6 @@
 		<mapper resource="Mapper/CommentMapper.xml" />
 		<mapper resource="Mapper/CalMapper.xml" />
 		<mapper resource="Mapper/LocalMapper.xml" />
+		<mapper resource="Mapper/SeedMapper.xml" />
 	</mappers>
 </configuration>

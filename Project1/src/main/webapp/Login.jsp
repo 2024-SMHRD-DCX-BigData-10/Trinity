@@ -30,7 +30,9 @@
 <body>
 <!-- 로그인 프로그램 만들기 -->
 	<form action="LoginCon.do" method="post">
+		
 			<h2> 로그인 </h2>
+		
 		<ul>
 			<li>아이디 <input type="text" name="id"></li><br>
 			<li>비밀번호 <input type="password" name="pw"></li><br>
