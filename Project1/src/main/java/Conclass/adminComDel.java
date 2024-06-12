@@ -15,6 +15,7 @@ public class adminComDel implements Command {
 	public String excute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String num=	request.getParameter("num");
+		System.out.println(num);
 		int row = new CommentDAO().adminComDel(num);
 	    if(row>0) {
 	    	  System.out.println("댓글삭제 성공");

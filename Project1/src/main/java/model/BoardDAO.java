@@ -48,6 +48,7 @@ static SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 		return board;
 	}
 	public int adminBoardDel(String num) {
+		System.out.println(num);
 		SqlSession session = sqlSessionFactory.openSession(true);
 		int row = session.insert("adminBoardDel",num);
 		 session.close();

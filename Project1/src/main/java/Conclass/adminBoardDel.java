@@ -15,6 +15,7 @@ public class adminBoardDel implements Command {
 	public String excute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String num =request.getParameter("num");
+		System.out.println(num);
 		int row = new BoardDAO().adminBoardDel(num);
 		
 		
