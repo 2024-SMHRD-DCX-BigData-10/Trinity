@@ -1,6 +1,5 @@
 package model;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 
 import org.apache.ibatis.session.SqlSession;

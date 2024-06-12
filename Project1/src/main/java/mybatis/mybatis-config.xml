@@ -13,6 +13,7 @@
 		<typeAlias type="model.MachineDTO" alias="MachineDTO"/>
 		<typeAlias type="model.LocalDTO" alias="LocalDTO"/>
 		<typeAlias type="model.SeedDTO" alias="SeedDTO"/>
+		<typeAlias type="model.MaterialDTO" alias="MaterialDTO"/>
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
@@ -33,5 +34,6 @@
 		<mapper resource="Mapper/CalMapper.xml" />
 		<mapper resource="Mapper/LocalMapper.xml" />
 		<mapper resource="Mapper/SeedMapper.xml" />
+		<mapper resource="Mapper/MaterialMapper.xml" />
 	</mappers>
 </configuration>

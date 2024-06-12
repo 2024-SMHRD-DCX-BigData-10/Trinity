@@ -180,7 +180,7 @@
 									</tr>
 									<tr id="tr1"> <td>&nbsp</td> </tr>
 									<tr>
-										<td> 농기구 </td>
+										<td> 농기계 </td>
 										<td> <select name="machine">
 											<option value="yes"> 사용 </option>
 											<option value="no"> 미사용 </option>
@@ -195,8 +195,6 @@
 								</form>
 
 								
-
-
 						</div>
 					</div>
 				</div>
