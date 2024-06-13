@@ -76,31 +76,7 @@ h1 {
 
 							<!-- Sidebar 1 -->
 
-							<section>
-								<h3>Just a Subheading</h3>
-								<p>Phasellus quam turpis, feugiat sit amet ornare in,
-									hendrerit in lectus. Praesent semper mod quis eget mi. Etiam eu
-									ante risus. Aliquam erat volutpat. Aliquam luctus et mattis
-									lectus sit amet pulvinar. Nam turpis et nisi etiam.</p>
-								<footer>
-									<a href="#" class="button">Continue Reading</a>
-								</footer>
-							</section>
-
-							<section>
-								<h3>Another Subheading</h3>
-								<ul class="links">
-									<li><a href="#">Amet turpis, feugiat sit amet</a></li>
-									<li><a href="#">Ornare in hendrerit lectus</a></li>
-									<li><a href="#">Semper mod quis eget dolore</a></li>
-									<li><a href="#">Consequat lorem phasellus</a></li>
-									<li><a href="#">Amet turpis feugiat amet</a></li>
-									<li><a href="#">Semper mod quisturpis nisi</a></li>
-								</ul>
-								<footer>
-									<a href="#" class="button">More Random Links</a>
-								</footer>
-							</section>
+							
 
 						</div>
 					</div>
@@ -211,31 +187,7 @@ h1 {
 
 							<!-- Sidebar 2 -->
 
-							<section>
-								<h3>Another Subheading</h3>
-								<ul class="links">
-									<li><a href="#">Amet turpis, feugiat sit amet</a></li>
-									<li><a href="#">Ornare in hendrerit lectus</a></li>
-									<li><a href="#">Semper mod quis eget dolore</a></li>
-									<li><a href="#">Consequat lorem phasellus</a></li>
-									<li><a href="#">Amet turpis feugiat amet</a></li>
-									<li><a href="#">Semper mod quisturpis nisi</a></li>
-								</ul>
-								<footer>
-									<a href="#" class="button">More Random Links</a>
-								</footer>
-							</section>
-
-							<section>
-								<h3>Just a Subheading</h3>
-								<p>Phasellus quam turpis, feugiat sit amet ornare in,
-									hendrerit in lectus. Praesent semper mod quis eget mi. Etiam eu
-									ante risus. Aliquam erat volutpat. Aliquam luctus et mattis
-									lectus sit amet pulvinar. Nam turpis et nisi etiam.</p>
-								<footer>
-									<a href="#" class="button">Continue Reading</a>
-								</footer>
-							</section>
+							
 
 						</div>
 					</div>
