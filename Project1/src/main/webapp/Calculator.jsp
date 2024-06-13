@@ -166,7 +166,6 @@
 										<td> <select name="seed">
 											<option value="고추"> 고추 </option>
 											<option value="배추"> 배추 </option>
-											<option value="무"> 무 </option>
 										</select> </td>
 									</tr>
 									<tr id="tr1"> <td>&nbsp</td> </tr>
