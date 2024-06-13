@@ -95,7 +95,7 @@ h3{
 
          <!-- Logo -->
          <h1>
-            <a href="Main.jsp" class="title"><Strong>농부樂아</Strong></a>
+            <a href="Main.jsp" class="title"><Strong>농부樂</Strong></a>
          </h1>
          <%
          if (user_info != null) {
@@ -136,7 +136,6 @@ h3{
                <li class="current"><a href="Main.jsp">Home</a></li>
                <li><a href="Calculator.jsp">계산기</a></li>
                <li><a href="BoardMain.jsp">게시판</a></li>
-               <li><a href="Notice.html">공지사항</a></li>
             </ul>
          </nav>
 
