@@ -76,7 +76,7 @@ a{
    color: black;
 }
 #board{
-	font-style: center;
+	text-align: center;
 }
 </style>
 </head>
