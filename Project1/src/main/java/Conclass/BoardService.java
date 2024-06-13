@@ -40,10 +40,9 @@ public class BoardService implements Command {
 			// 요청 데이터 받아오기
 			String id = multi.getParameter("id");
 			String title = multi.getParameter("title");
-			String filename = multi.getFilesystemName("filename");
 			String content = multi.getParameter("content");
 
-			BoardVO vo = new BoardVO(id, title, filename, content);
+			BoardVO vo = new BoardVO(id, title, content);
 			System.out.println(vo.toString());
 
 			// DB에 넣어주기
