@@ -3,6 +3,7 @@ package Conclass;
 import java.io.IOException;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -77,7 +78,13 @@ public class CalCon implements Command {
 			}		
 		}
 		
-		int sum =  result_mc+LanPrice+SeedPrice+result_Pes;
+		int result =  result_mc+LanPrice+SeedPrice+result_Pes;
+		ArrayList<Integer> sum= new ArrayList<Integer>();
+		sum.add(SeedPrice);
+		sum.add(LanPrice);
+		sum.add(result_Pes);
+		sum.add(result_mc);
+		sum.add(result);
 		HttpSession session = request.getSession();
 		session.setAttribute("sum", sum);
 		

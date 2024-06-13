@@ -4,6 +4,7 @@
 <%@ page isELIgnored="false" language="java"
 	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE HTML>
 <!--
 	Arcana by HTML5 UP
@@ -53,7 +54,7 @@ margin: 0px !important;
 </head>
 <body class="is-preload">
 	<%
-	int sum = (Integer) session.getAttribute("sum");
+	ArrayList<Integer>sum = (ArrayList)session.getAttribute("sum");
 	MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
 	%>
 
@@ -119,11 +120,52 @@ margin: 0px !important;
 
 						<table>
 							<tr>
-								<td colspan="2"><%=user_info.getName()%>님의 예상 초기 자본은 <%=sum%>원입니다.
+								<td colspan="2" style="font-size: 30px;"><strong><%=user_info.getName()%></strong>님의 예상 초기 자본결과 입니다.
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2"><br>
 								</td>
 							</tr>
 							<tr>
 								<td colspan="2">
+								<strong>종자</strong> <fmt:formatNumber value="${sum.get(0)}" pattern="#,###"/>원
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2"><br>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+								<strong>토지</strong> : <fmt:formatNumber value="${sum.get(1)}" pattern="#,###"/>원
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2"><br>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+								<strong>농약&비료</strong> : <fmt:formatNumber value="${sum.get(2)}" pattern="#,###"/>원
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2"><br>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+								<strong>농기계</strong> : <fmt:formatNumber value="${sum.get(3)}" pattern="#,###"/>원
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2"><br>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+								<strong>총 합계</strong> : <fmt:formatNumber value="${sum.get(4)}" pattern="#,###"/>원
 								</td>
 							</tr>
 							<tr id="tr1">
