@@ -5,17 +5,17 @@
   
   <mapper namespace="mapper.BoardMapper">
   <insert id="writeBoard" parameterType="BoardVO">
-  	insert into tbl_board (mem_id,b_title,b_file,b_content,b_write_dt) values
-  	(#{id},#{title},#{filename},#{content},sysdate)
+  	insert into tbl_board (mem_id,b_title,b_content,b_write_dt) values
+  	(#{id},#{title},#{content},sysdate)
   </insert>
   <select id="allBoard" resultType="BoardVO">
-  select b_idx, mem_id as id,b_title as title,b_file as filename ,b_content as content ,b_write_dt as b_date from tbl_board order by b_idx
+  select b_idx, mem_id as id,b_title as title,b_content as content ,b_write_dt as b_date from tbl_board order by b_idx
   </select>
    <select id="myBoard" resultType="BoardVO">
-  select b_idx, mem_id as id,b_title as title,b_file as filename ,b_content as content ,b_write_dt as b_date from tbl_board where mem_id=#{id} order by b_idx
+  select b_idx, mem_id as id,b_title as title,b_content as content ,b_write_dt as b_date from tbl_board where mem_id=#{id} order by b_idx
   </select>
   <select id="detailBoard" resultType="BoardVO">
-  select b_idx, mem_id as id,b_title as title,b_file as filename ,b_content as content from tbl_board where b_idx=#{num}
+  select b_idx, mem_id as id,b_title as title ,b_content as content from tbl_board where b_idx=#{num}
   </select>
   <delete id="adminBoardDel" parameterType="String">
   delete from tbl_board where b_idx=#{num}

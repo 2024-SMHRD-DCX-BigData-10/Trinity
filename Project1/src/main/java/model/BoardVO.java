@@ -13,18 +13,16 @@ import lombok.ToString;
 @ToString
 public class BoardVO {
 	
-	public BoardVO(String b_idx,String id,String title,String filename,String content) {
+	public BoardVO(String b_idx,String id,String title,String content) {
 		this.b_idx=b_idx;
 		this.id=id;
 		this.title=title;
-		this.filename=filename;
 		this.content=content;
 	}
 	
 	private String b_idx;
 	@NonNull private String id;
 	@NonNull private String title;
-	@NonNull private String filename;
 	@NonNull private String content;
 	private String b_date;
 	

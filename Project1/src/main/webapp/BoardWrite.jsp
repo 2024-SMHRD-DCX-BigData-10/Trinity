@@ -104,11 +104,7 @@ if (user_info==null){%>
 												<input type="hidden" NAME="id" value="<%=id%>"><%=id%>
 												</td>
 											</tr>
-											<tr>
-											<td>첨부파일</td>
-											<td><input type="file" name="filename"
-													style="float: right;">
-											</tr>
+											
 											<tr>
 												<td colspan="2">내용</td>
 											</tr>

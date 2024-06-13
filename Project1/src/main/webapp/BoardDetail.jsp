@@ -103,33 +103,32 @@ h1 {
 								<div id="board">
 									<table>
 										<tr>
-											<td>제목</td>
+											<td><strong>제목</strong></td>
 											<td><%=board.getTitle()%></td>
 										</tr>
 										<tr>
-											<td>작성자</td>
+											<td><strong>작성자</strong></td>
 											<td><%=board.getId()%></td>
 										</tr>
+										
 										<tr>
-											<td>다운로드</td>
-											<td><a href="./file/<%=board.getFilename()%>" download><%=board.getFilename()%></a></td>
+											<td colspan="2"><br></td>
 										</tr>
-										<tr>
-											<td colspan="2">내용</td>
-										</tr>
+										<hr>
 										<tr>
 											<td colspan="2">
-												<h5><%=board.getContent()%></h5> <img alt=""
-												src="./file/<%=board.getFilename()%>" class="contentimg">
+												<fieldset><legend>Content</legend>
+												<p style="font-size: 15px;"> <br> <%=board.getContent()%><br></p>
+												</fieldset>
+												
 											</td>
 										</tr>
 									</table>
-									<p>댓글</p>
 									<table>
 										<tr>
-											<td>작성자</td>
-											<td>댓글</td>
-											<td>삭제</td>
+											<td> <strong>작성자</strong> </td>
+											<td><strong>댓글</strong></td>
+											<td><strong>삭제</strong></td>
 										</tr>
 										<c:forEach var="b" items="${cvo}">
 											<tr>
@@ -146,12 +145,12 @@ h1 {
 									<form action="CommentWrite.do" method="post">
 										<table>
 											<tr>
-												<td>댓글<input type="hidden" NAME="mem_id"
+												<td >댓글<input type="hidden" NAME="mem_id"
 													value="<%=user_info.getId()%>"> <input
 													type="hidden" NAME="b_idx" value="<%=board.getB_idx()%>">
 												</td>
-												<td><input type="text" maxlength='400' name="content"></td>
-												<td><input type="submit" value="작성하기"></td>
+												<td><input type="text" maxlength='400' name="content" ></td>
+												<td><input type="submit" value="작성하기" ></td>
 											</tr>
 										</table>
 									</form>
