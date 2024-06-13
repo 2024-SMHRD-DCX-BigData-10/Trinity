@@ -1,3 +1,4 @@
+<%@page import="model.MemberDTO"%>
 <%@page import="model.BoardVO"%>
 <%@page import="java.util.List"%>
 <%@page import="model.BoardDAO"%>
@@ -30,9 +31,56 @@
 			color: black;
 			
 	}
+	button#sign {
+   		margin-left: 1000px;
+   		margin-bottom: 20px;
+   		background-color: #9acd32;
+	}
+
+button#login {
+   margin-left: 10px;
+   background-color: #9acd32;
+}
+
+button#mypage {
+   margin-left: 1000px;
+   margin-bottom: 20px;
+   background-color: #9acd32;
+}
+button#admin {
+   margin-left: 1000px;
+   margin-bottom: 20px;
+   background-color: #9acd32;
+}
+
+button#logout {
+   margin-left: 10px;
+   background-color: #9acd32;
+}
+a#join {
+   color: black;
+}
+
+a#login {
+   color: black;
+}
+
+a#mypage {
+   color: black;
+}
+
+a#logout {
+   color: black;
+}
+a{
+   color: black;
+}
 </style>
 </head>
 <body class="is-preload">
+	<%
+   MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
+   %>
 	<div id="page-wrapper">
 
 		<!-- Header -->
@@ -42,7 +90,40 @@
 			<h1>
 				<a href="Main.jsp" class="title"> <Strong>농부樂</Strong></a>
 			</h1>
-
+			<%
+         if (user_info != null) {
+         %>
+         <%
+         if (user_info.getId().equals("admin")) {
+         %>
+         <button id="admin"><a href="adminpage.jsp">관리자 페이지</a></button> 
+         <button id="logout">
+            <a href="LogoutCon.do" id="Logout">로그아웃</a>
+         </button>
+          
+         <%} else {%>
+         <button id="mypage">
+            <a href="Mypage.jsp" id="mypage">마이페이지</a>
+         </button>
+         <button id="logout">
+            <a href="LogoutCon.do" id="logout">로그아웃</a>
+         </button>
+         <%
+         }
+         %>
+         <%
+         } else {
+         %>
+         <button id="sign">
+            <a href="Join.jsp" id="join">회원가입</a>
+         </button>
+         <button id="login">
+            <a href="Login.jsp" id="login">로그인</a>
+         </button>
+         <%
+         }
+         %>
+			
 			<!-- Nav -->
 			<nav id="nav">
 				<ul>
