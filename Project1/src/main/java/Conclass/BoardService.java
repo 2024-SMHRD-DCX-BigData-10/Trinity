@@ -18,30 +18,14 @@ public class BoardService implements Command {
 	@Override
 	public String excute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// 파일업로드를 하기위한 변수설정
-		// 1. request객체
-		// 2. 파일을 저장할 경로(String)
-		String savePath = request.getServletContext().getRealPath("./file");
 		
-
-		// 3. 파일 최대크기 지정(int)
-		int maxSize = 1024 * 1024 * 10;
-
-		// 4. 인코딩 방식(String)
-		String encoding = "UTF-8";
-
-		// 5.파일 이름 중복제거
-		DefaultFileRenamePolicy rename = new DefaultFileRenamePolicy();
-
-		// 6.파일 업로드 객체 -> multipart
-		MultipartRequest multi;
-		try {
-			multi = new MultipartRequest(request, savePath, maxSize, encoding, rename);
-			// 요청 데이터 받아오기
-			String id = multi.getParameter("id");
-			String title = multi.getParameter("title");
-			String content = multi.getParameter("content");
-
+		
+			String id = request.getParameter("id");
+			String title = request.getParameter("title");
+			String content = request.getParameter("content");
+			System.out.println(id);
+			System.out.println(title);
+			System.out.println(content);
 			BoardVO vo = new BoardVO(id, title, content);
 			System.out.println(vo.toString());
 
@@ -53,9 +37,7 @@ public class BoardService implements Command {
 			} else {
 				System.out.println("게시물 작성 실패");
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		
 		return "BoardMain.jsp";
 	}
 

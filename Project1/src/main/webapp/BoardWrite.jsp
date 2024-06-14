@@ -30,18 +30,13 @@
 </head>
 <body class="is-preload">
 <%
-String id = null;
 MemberDTO user_info = (MemberDTO) session.getAttribute("user_info");
 if (user_info==null){%>
 	<script type="text/javascript">
 		alert("로그인 하세요. ");
 		location.href = "./Login.jsp";
 	</script>
-<%
-} else{
-	 id = user_info.getId();
-}
-%>
+<%}%>
 	<div id="page-wrapper">
 
 		<!-- Header -->
@@ -91,8 +86,8 @@ if (user_info==null){%>
 									alt="" /></span>
 							
 								<div id="board">
-									<form action="BoardService.do" method="post"
-										enctype="multipart/form-data">
+									<form action="BoardService.do" method="post">
+										
 										<table>
 											<tr>
 												<td>제목</td>
@@ -101,7 +96,8 @@ if (user_info==null){%>
 											<tr>
 												<td>작성자</td>
 												<td>
-												<input type="hidden" NAME="id" value="<%=id%>"><%=id%>
+												<input type="hidden" NAME="id"
+													value='<%=user_info.getId()%>'><%=user_info.getId()%>
 												</td>
 											</tr>
 											
