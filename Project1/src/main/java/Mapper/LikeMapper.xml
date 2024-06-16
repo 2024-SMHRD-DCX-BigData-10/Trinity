@@ -10,7 +10,7 @@
   	<select id="like_count" parameterType="LikeDTO" resultType="Integer">
   	SELECT count(*) FROM TBL_LIKE WHERE Board_id=#{b_idx}
   	</select>
-  	<select id="like_check" parameterType="LikeDTO">
-  	SELECT * FROM TBL_LIKE WHERE Board_id=#{b_idx} and mem_id= #{mem_id}
+  	<select id="like_check" parameterType="LikeDTO" resultType="String">
+  	SELECT Board_id as b_idx FROM TBL_LIKE WHERE Board_id=#{b_idx} and mem_id= #{mem_id}
   	</select>
    </mapper>

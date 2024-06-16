@@ -10,7 +10,7 @@
 <%@page import="model.CommentVO"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page isELIgnored="false" language="java"
-	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isErrorPage="true" errorPage="Login.jsp"%>
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE HTML>
 <!--
 	Arcana by HTML5 UP
@@ -104,7 +104,6 @@ h1 {
 								LikeDTO dto = new LikeDTO(board.getB_idx(),user_info.getId());
 								LikeDTO dto1 = new LikeDTO(board.getB_idx());
 								int like_cnt = new LikeDAO().like_count(dto1);
-								int like_check = new LikeDAO().like_check(dto);
 								%>
 								<div id="board">
 									<table>

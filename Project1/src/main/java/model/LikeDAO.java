@@ -22,12 +22,17 @@ public class LikeDAO {
 		session.close();
 		return cnt;
 	}
-	public int like_check(LikeDTO dto) {
-		int cnt=0;
+	public boolean like_check(LikeDTO dto) {
+		
 		SqlSession session = sqlSessionFactory.openSession(true);
-		cnt= session.selectOne("like_count", dto);
+		String cnt= session.selectOne("like_check", dto);
 		session.close();
-		return cnt;
+		if(cnt ==null) {
+			return true;//좋아요 가능
+		}else {
+			return false;//불가
+		}
+		
 	}
 	
 }
