@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   <mapper namespace="mapper.LikeMapper">
+	<insert id="b_like" parameterType="LikeDTO">
+  		insert into tbl_like (board_id,mem_id,M_likes) values
+  		(#{b_idx},#{mem_id},'Y')
+  	</insert>
+  	<select id="like_count" parameterType="LikeDTO" resultType="Integer">
+  	SELECT count(*) FROM TBL_LIKE WHERE Board_id=#{b_idx}
+  	</select>
+  	<select id="like_check" parameterType="LikeDTO">
+  	SELECT * FROM TBL_LIKE WHERE Board_id=#{b_idx} and mem_id= #{mem_id}
+  	</select>
+   </mapper>

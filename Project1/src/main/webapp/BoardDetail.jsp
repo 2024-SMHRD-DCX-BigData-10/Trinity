@@ -1,3 +1,5 @@
+<%@page import="model.LikeDTO"%>
+<%@page import="model.LikeDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="model.CommentDAO"%>
 <%@page import="java.util.List"%>
@@ -99,6 +101,10 @@ h1 {
 
 								ArrayList<CommentVO> cvo = new CommentDAO().allcoment(board.getB_idx());
 								pageContext.setAttribute("cvo", cvo);
+								LikeDTO dto = new LikeDTO(board.getB_idx(),user_info.getId());
+								LikeDTO dto1 = new LikeDTO(board.getB_idx());
+								int like_cnt = new LikeDAO().like_count(dto1);
+								int like_check = new LikeDAO().like_check(dto);
 								%>
 								<div id="board">
 									<table>
@@ -139,6 +145,12 @@ h1 {
 											</tr>
 										</c:forEach>
 									</table>
+									
+									
+									<button>
+									<a href="LikeCon.do?b_idx=<%=board.getB_idx()%>&mem_id=<%= user_info.getId()%>">좋아요</a>
+									<p><%=like_cnt %></p></button>
+											
 									<%
 									if (user_info != null) {
 									%>
@@ -154,6 +166,9 @@ h1 {
 											</tr>
 										</table>
 									</form>
+
+
+									
 
 									<%
 									}else{
@@ -203,5 +218,6 @@ h1 {
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+
 </body>
 </html>

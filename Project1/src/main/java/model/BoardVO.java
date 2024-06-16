@@ -25,5 +25,4 @@ public class BoardVO {
 	@NonNull private String title;
 	@NonNull private String content;
 	private String b_date;
-	
-}
+} 
